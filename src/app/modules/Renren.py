@@ -187,10 +187,11 @@ class SuperRenren:
         self.requestToken = self.requester.requestToken
         self._rtk = self.requester._rtk
 
-	def GetMsg(self):
-		html = self.requester.mainHtml
-		if self.requester.uiVersion == 'v7':
-			
+    def GetMsg(self):
+        html = self.requester.mainHtml
+        if self.requester.uiVersion == 'v7':
+            pass
+
     # 发送个人状态
     def PostMsg(self, msg):
         poster = RenrenPostMsg()
