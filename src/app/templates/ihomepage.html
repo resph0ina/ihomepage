@@ -77,7 +77,10 @@
 	
 </div>
 -->
-<div class="searchblock" id="sblock1" style="left:20px;top:10px">
+
+{% for block in blocks%}
+{% if block.style == 'searchblock' %}
+<div class="searchblock" id="sblock1" style="left:{{block.position.x}}px;top:{{block.position.y}}px">
 	<span>
 	    <select name="se" id="SEdropdown" class="egg_imagedropdown">
   			<option>{{ url_for('static', filename='baidulittlelogo.png') }}</option>
@@ -101,13 +104,13 @@
 		var searchengine=document.getElementById("SEdropdown").value;
 
 
-		if (searchengine=="baidulittlelogo.png"){
+		if (searchengine=="{{ url_for('static', filename='baidulittlelogo.png') }}"){
 					var bdstr=document.getElementById("q").value;
 					var bdstr2="http://www.baidu.com/#wd="+bdstr;
 					document.getElementById("SEform").action=bdstr2;
 		}
 		else
-			if(searchengine=="binglittlelogo.png"){
+			if(searchengine=="{{ url_for('static', filename='binglittlelogo.png') }}"){
 				var bistr="http://cn.bing.com/"
 				document.getElementById("SEform").action=bistr;
 
@@ -117,6 +120,10 @@
 	</script>
 </div>
 <div style="float:right">
+{% endif %}
+{% endfor %}
+
+<a href=/setting>页面设置</a>
 {% if session.has_key('username') %}
 {{session['username']}}
 <a href=/logout>登出</a>
