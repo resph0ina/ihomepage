@@ -6,66 +6,24 @@
 <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='./egg/egg.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='es.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='egg/egg.css') }}" />
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./es.css') }}" /> 
-
-<style type="text/css">
-<!--
-.greenblock{
-	
-	width: 200px;
-	height: 200px;
-	background-color: green;
-	position: absolute;
-}
-.redblock{
-	width: 200px;
-	height: 200px;
-	background-color: red;
-	position: absolute;
-}
-.searchblock{
-	width: 900px;
-	height: 40px;
-	position: absolute;
-	
-}
-.searchbar{
-	width: 500px;
-	height: 32px;
-	size:10px;
-	font-size: 20px;
-	display: inline-block;
-	position: relative;
-	vertical-align:45%;
-}
-.searchbtn{
-	width: 60px;
-	height: 38px;
-	font-size: 18px;
-	display: inline-block;
-	position: relative;
-	vertical-align:54%;
-}
-.briefviewblock{
-	width: 200px;
-	height: 200px;
-	position: absolute;
-
-
-}
-.searchbarimg{
-	width: 70px;
-	height: 35px;
-	display: inline-block;
-	position: relative;
-	vertical-align:text-top;}
-
--->
-</style>
+<link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./blocks.css') }}" /> 
 </head>
 
-<body style="background-color:grey">
+<body>
+<div style="float:right">
+<a href=/setting>页面设置</a>
+{% if session.has_key('username') %}
+{{session['username']}}
+<a href=/logout>登出</a>
+{% else %}
+<a href=/register>注册</a>
+<a href=/login>登录</a>
+{% endif %}
+</div>
+<h1 style="text-align:center;margin:20px;padding-top:30px">iHomepage</h1>
 <!--
 
 <div class="greenblock" id="gblock1" style="left:20px;top:80px">
@@ -77,20 +35,13 @@
 	
 </div>
 -->
-
+<div class="content">
 {% for block in blocks%}
 	{% if block.style == 'searchblock' %}
-		{% include "searchbar.html" %}
+		{% include "block_search.html" %}
+	{% else %}
+		{% include "block_textlines.html" %}
 	{% endif %}
 {% endfor %}
-
-<a href=/setting>页面设置</a>
-{% if session.has_key('username') %}
-{{session['username']}}
-<a href=/logout>登出</a>
-{% else %}
-<a href=/register>注册</a>
-<a href=/login>登录</a>
-{% endif %}
 </div>
 </body>
