@@ -1,0 +1,40 @@
+<div class="searchblock" id="sblock1" style="left:{{block.position.x}}px;top:{{block.position.y}}px">
+	<span>
+	    <select name="se" id="SEdropdown" class="egg_imagedropdown">
+  			<option>{{ url_for('static', filename='baidulittlelogo.png') }}</option>
+  			<option>{{ url_for('static', filename='binglittlelogo.png') }}</option>
+       </select>
+	</span>
+	<form name="search" id="SEform" onsubmit="javascript:searchsubmit();" action="http://www.baidu.com/" style="display:inline-block" method="get">
+
+
+	<span>
+		<input class="searchbar" id="q" name="q" type="text" autocomplete="off"/>
+	</span>
+	<span>
+		<input class="searchbtn" type="submit" value="搜索">
+	</span>
+	</form>
+
+	<script>
+	function searchsubmit(){
+
+		var searchengine=document.getElementById("SEdropdown").value;
+
+
+		if (searchengine=="{{ url_for('static', filename='baidulittlelogo.png') }}"){
+					var bdstr=document.getElementById("q").value;
+					var bdstr2="http://www.baidu.com/#wd="+bdstr;
+					document.getElementById("SEform").action=bdstr2;
+		}
+		else
+			if(searchengine=="{{ url_for('static', filename='binglittlelogo.png') }}"){
+				var bistr="http://cn.bing.com/"
+				document.getElementById("SEform").action=bistr;
+
+			}
+	}
+		
+	</script>
+</div>
+<div style="float:right">
