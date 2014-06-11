@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, flash, redirect, session, request
 from app import app, database, block
 import json
@@ -50,6 +51,17 @@ def login():
 def logout():
     del(session['username'])
     return redirect('ihomepage')
+
+@app.route('/setting', methods = ['GET', 'POST'])
+def setting():
+    postfix = ""
+    if (request.form.has_key('submit')):
+        
+        postfix = "<br>your change is saved successfully"
+    blocks = json.loads(session['ihomepage'])
+    return render_template('setting.html',
+                           session = session,
+                           blocks = blocks)+postfix
 
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
