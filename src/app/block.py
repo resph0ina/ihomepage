@@ -28,12 +28,17 @@ class position:
         self.x = x
         self.y = y
 
-class block:
-    def __init__(self, x, y, style):
+class Block:
+    uid = 0
+    def __init__(self, x, y, style, width = 1, height = 1):
+        Block.uid += 1
+        self.uid = Block.uid
         self.position = position(x, y)
         self.style = style
+        self.width = width
+        self.height = height
         self.content = {}
 
-initial_block = block(20, 10, 'searchblock')
+initial_block = Block(20, 10, 'searchblock')
 initial_blocks = [initial_block]
 json_initial = [json.dumps(initial_block, default = object2dict)]

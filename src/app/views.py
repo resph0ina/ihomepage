@@ -5,8 +5,18 @@ import json
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage'):
-        session['ihomepage'] = json.dumps(block.initial_blocks, default = block.object2dict)
+    if not session.has_key('ihomepage') or True:
+        default_blocks = block.initial_blocks
+        b1 = block.Block(20,10,'test')
+        b1.width = 1
+        b2 = block.Block(20,10,'test')
+        b2.width = 2
+        b2.height = 2
+        b2.color='green'
+        default_blocks.append(b1)
+        default_blocks.append(b2)
+        session['ihomepage'] = json.dumps(default_blocks, default = block.object2dict)
+
     blocks = json.loads(session['ihomepage'])
     return render_template('ihomepage.html',
                            session = session,
