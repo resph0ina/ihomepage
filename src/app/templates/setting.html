@@ -8,15 +8,19 @@
 <form action="" method="POST">
 {% for block in blocks %}
 
-	type:<input type="text" value="{{block.style}}" name="style{{block.uid}}" autocomplete="off"/>
-	x:<input type="text" value="{{block.position.x}}" name="x{{block.uid}}" style="width:25px" autocomplete="off"/>
-	y:<input type="text" value="{{block.position.y}}" name="y{{block.uid}}" style="width:25px" autocomplete="off"/>
-	width:<input type="text" value="{{block.width}}" name="width{{block.uid}}" style="width:15px" autocomplete="off"/>
-	height:<input type="text" value="{{block.height}}" name="height{{block.uid}}" style="width:15px" autocomplete="off"/>
-	<input type="submit" value="修改" name="change{{block.uid}}" autocomplete="off">
-	<input type="submit" value="删除" name="delete{{block.uid}}" autocomplete="off"><br>
+	type:<input type="text" value="{{block.style}}" name="style_{{block.uid}}" autocomplete="off"/>
+	width:<input type="text" value="{{block.width}}" name="width_{{block.uid}}" style="width:15px" autocomplete="off"/>
+	height:<input type="text" value="{{block.height}}" name="height_{{block.uid}}" style="width:15px" autocomplete="off"/>
+	<input type="submit" value="删除" name="delete_{{block.uid}}" autocomplete="off"><br>
 {% endfor %}
 <input type="submit" value="全部修改" name="change" autocomplete="off">
+</form>
+
+<form action="" method="POST">
+	type:<input type="text" name="style" autocomplete="off"/>
+	width:<input type="text" name="width" style="width:15px" autocomplete="off"/>
+	height:<input type="text" name="height" style="width:15px" autocomplete="off"/>
+<input type="submit" value="添加" name="add" autocomplete="off">
 </form>
 
 <a href=/>首页</a>
