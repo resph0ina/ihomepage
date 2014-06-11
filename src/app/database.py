@@ -1,12 +1,13 @@
 from app import db, models
 
-def checkRegister(username, password):
-    name = username
-    user = models.User.query.filter_by(username=name).first()
+def checkRegister(newuser):
+    user = models.User.query.filter_by(username=newuser['username']).first()
     if user != None:
         return 'username exists'
-    if len(password) < 6:
+    if len(newuser['password']) < 6:
         return 'password too short'
+    if (newuser['password'] != newuser['verifypassword']):
+        return 'input your password again correctly'
     return 'success'
 
 def addUser(username, password):

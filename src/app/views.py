@@ -5,23 +5,25 @@ from app import app, database
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
     return render_template('ihomepage.html',
-                           username = session['username'])
+                           session = session)
     
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     #user submit
     if (request.form.has_key('username')):
-        username = request.form.get('username')
-        password = request.form.get('password')
-        result = database.checkRegister(username, password)
+        newuser = {}
+        newuser['username'] = request.form.get('username')
+        newuser['password'] = request.form.get('password')
+        newuser['verifypassword'] = request.form.get('verifypassword')
+        result = database.checkRegister(newuser)
         if result == 'success':
-            session['username'] = username
-            database.addUser(username, password)
+            session['username'] = newuser['username']
+            database.addUser(newuser['username'], newuser['password'])
             return redirect('/registersuccess')
         else:
-            return render_template("register.html")+"<br>"+result
+            return render_template("register.html", session = session)+"<br>"+result
     #user click
-    return render_template("register.html")
+    return render_template("register.html", session = session)
 
 @app.route('/login', methods = ['GET', 'POST'])
 def login():
@@ -32,11 +34,17 @@ def login():
         result = database.login(username, password)
         if result == 'success':
             session['username'] = username
-            return redirect('/index')
+            return redirect('/ihomepage')
         else:
-            return render_template("login.html")+"<br>"+result
+            return render_template("login.html", session = session)+"<br>"+result
     #user click
-    return render_template("login.html")
+    return render_template("login.html",
+                           session = session)
+
+@app.route('/logout', methods = ['GET', 'POST'])
+def logout():
+    del(session['username'])
+    return redirect('ihomepage')
 
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
