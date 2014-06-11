@@ -1,11 +1,16 @@
 from flask import Flask, render_template, flash, redirect, session, request
-from app import app, database
+from app import app, database, block
+import json
 
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
+    if not session.has_key('ihomepage'):
+        session['ihomepage'] = json.dumps(block.initial_blocks, default = block.object2dict)
+    blocks = json.loads(session['ihomepage'])
     return render_template('ihomepage.html',
-                           session = session)
+                           session = session,
+                           blocks = blocks)
     
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
