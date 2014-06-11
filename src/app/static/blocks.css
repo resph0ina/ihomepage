@@ -1,5 +1,8 @@
-body {
-	background-color:"white";
+
+body{
+	font-family:"Trebuchet MS", tahoma, arial;
+	font-size:12px;
+	background-color:#ffffff;
 	padding:5px;
 }
 
