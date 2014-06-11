@@ -39,6 +39,6 @@ class Block:
         self.height = height
         self.content = {}
 
-initial_block = Block(20, 10, 'searchblock')
-initial_blocks = [initial_block]
-json_initial = [json.dumps(initial_block, default = object2dict)]
+# initial_block = Block(20, 10, 'searchblock')
+# initial_blocks = [initial_block]
+# json_initial = [json.dumps(initial_block, default = object2dict)]

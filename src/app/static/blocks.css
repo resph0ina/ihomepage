@@ -26,9 +26,9 @@ body{
 }
 
 .block{
-	-webkit-box-shadow: 0 0 4px #000;
+	-webkit-box-shadow: 2px 2px 4px #000;
 	-moz-box-shadow: 0 0 4px #000;
-	box-shadow: 0 0 4px #000;
+	box-shadow: 2px 2px 4px #000;
 	-webkit-transition: -webkit-box-shadow .3s ease-out;
 	-moz-transition: -moz-box-shadow .3s ease-out;
 	transition: box-shadow .3s ease-out;
@@ -43,9 +43,9 @@ body{
 
 .block:hover {
 	cursor: pointer;
-	-webkit-box-shadow: 0 0 12px #000;
+	-webkit-box-shadow: 4px 4px 12px #000;
 	-moz-box-shadow: 0 0 12px #000;
-	box-shadow: 0 0 12px #000;
+	box-shadow: 4px 4px 12px #000;
 }
 
 .searchblock{

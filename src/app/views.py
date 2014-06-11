@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, flash, redirect, session, request
+from flask import Flask, render_template, flash, redirect, session, request, g
 from app import app, database, block
 import json
+
+@app.before_request
+def before_request():
+    g.blocks = json.loads(session['ihomepage'])
+
 
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
     if not session.has_key('ihomepage') or True:
-        default_blocks = block.initial_blocks
+        block.Block.uid = 0
         b1 = block.Block(20,10,'test')
         b1.width = 1
         b2 = block.Block(20,10,'test')
         b2.width = 2
         b2.height = 2
         b2.color='green'
-        default_blocks.append(b1)
-        default_blocks.append(b2)
+        default_blocks = [b1,b2]
         session['ihomepage'] = json.dumps(default_blocks, default = block.object2dict)
 
     blocks = json.loads(session['ihomepage'])
@@ -64,10 +68,26 @@ def logout():
 
 @app.route('/setting', methods = ['GET', 'POST'])
 def setting():
+    blocks = json.loads(session['ihomepage'])
+    maxuid = 0
+    idmap = {}
+    num = 0
+    for bk in blocks:
+        if bk['uid'] > maxuid:
+            maxuid = bk['uid']
+            idmap[bk['uid']] = num
+            num = num+1
     postfix = ""
-    if (request.form.has_key('submit')):
-        
-        postfix = "<br>your change is saved successfully"
+    if (request.form.has_key('change')):
+        postfix = "<br>all your change is saved successfully"
+    else:
+        for i in range(1, maxuid+1):
+            if (request.form.has_key('change'+str(i))):
+                postfix = "<br>your change is saved successfully"+str(i)
+            if (request.form.has_key('delete'+str(i))):
+                del blocks[idmap[i]]
+                session['ihomepage'] = json.dumps(blocks, default = block.object2dict)
+                postfix = "<br>delete successfully"+str(i)
     blocks = json.loads(session['ihomepage'])
     return render_template('setting.html',
                            session = session,

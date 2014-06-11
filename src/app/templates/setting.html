@@ -5,15 +5,19 @@
 </head>
 
 <body>
-
-{% for block in blocks %}
 <form action="" method="POST">
-	type:<input type="text" value="{{block.style}}" name="style" autocomplete="off"/>
-	x:<input type="text" value="{{block.position.x}}" name="x" style="width:25px" autocomplete="off"/>
-	y:<input type="text" value="{{block.position.y}}" name="y" style="width:25px" autocomplete="off"/>
-	<input type="submit" value="修改" name="submit" autocomplete="off">
-</form>
+{% for block in blocks %}
+
+	type:<input type="text" value="{{block.style}}" name="style{{block.uid}}" autocomplete="off"/>
+	x:<input type="text" value="{{block.position.x}}" name="x{{block.uid}}" style="width:25px" autocomplete="off"/>
+	y:<input type="text" value="{{block.position.y}}" name="y{{block.uid}}" style="width:25px" autocomplete="off"/>
+	width:<input type="text" value="{{block.width}}" name="width{{block.uid}}" style="width:15px" autocomplete="off"/>
+	height:<input type="text" value="{{block.height}}" name="height{{block.uid}}" style="width:15px" autocomplete="off"/>
+	<input type="submit" value="修改" name="change{{block.uid}}" autocomplete="off">
+	<input type="submit" value="删除" name="delete{{block.uid}}" autocomplete="off"><br>
 {% endfor %}
+<input type="submit" value="全部修改" name="change" autocomplete="off">
+</form>
 
 <a href=/>首页</a>
 {% if session.has_key('username') %}
