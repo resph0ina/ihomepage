@@ -2,6 +2,7 @@
 from flask import Flask, render_template, flash, redirect, session, request, g
 from app import app, database, block
 import json
+import types
 
 @app.before_request
 def before_request():
@@ -11,7 +12,7 @@ def before_request():
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage') or True:
+    if not session.has_key('ihomepage'):
         block.Block.uid = 0
         b1 = block.Block(20,10,'test')
         b1.width = 1
@@ -78,13 +79,26 @@ def setting():
             idmap[bk['uid']] = num
             num = num+1
     postfix = ""
+    #change
     if (request.form.has_key('change')):
         postfix = "<br>all your change is saved successfully"
+        for i in request.form.keys():
+            if len(i.split('_')) <= 1:
+                continue
+            key = i.split('_')[0]
+            uid = i.split('_')[1]
+            if type(blocks[idmap[int(uid)]][key]) is types.IntType:
+                blocks[idmap[int(uid)]][key] = int(request.form[i])
+            else:
+                blocks[idmap[int(uid)]][key] = request.form[i]
+            session['ihomepage'] = json.dumps(blocks, default = block.object2dict)
+    #add
+    elif (request.form.has_key('add')):
+        postfix = "<br>add successfully"
+    #delete    
     else:
         for i in range(1, maxuid+1):
-            if (request.form.has_key('change'+str(i))):
-                postfix = "<br>your change is saved successfully"+str(i)
-            if (request.form.has_key('delete'+str(i))):
+            if (request.form.has_key('delete_'+str(i))):
                 del blocks[idmap[i]]
                 session['ihomepage'] = json.dumps(blocks, default = block.object2dict)
                 postfix = "<br>delete successfully"+str(i)
