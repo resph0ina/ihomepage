@@ -1,11 +1,4 @@
-<div class="block textlines" id="tb{{ block.uid }}" style="display:none">
+<div class="textlines">
 {{ block.uid }}
 </div>
 <!-- left:{{block.position.x}}px;top:{{block.position.y}}px; -->
-<script type="text/javascript">
-$("#tb{{ block.uid }}").width({{ block.width * 150 }});
-$("#tb{{ block.uid }}").height({{ block.height * 150 }});
-{% if block.color %}
-$("#tb{{ block.uid }}").css("background-color","{{block.color}}");
-{% endif %}
-</script>

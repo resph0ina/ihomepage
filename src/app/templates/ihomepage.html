@@ -24,24 +24,19 @@
 {% endif %}
 </div>
 <h1 style="text-align:center;margin:20px;padding-top:30px">iHomepage</h1>
-<!--
 
-<div class="greenblock" id="gblock1" style="left:20px;top:80px">
+{% include "block_search.html" %}
 
-	
-</div>
-
-<div class="redblock" id="rblock1" style="left:320px;top:80px">
-	
-</div>
--->
 <div class="content">
 {% for block in blocks%}
-	{% if block.style == 'searchblock' %}
-		{% include "block_search.html" %}
-	{% else %}
-		{% include "block_textlines.html" %}
+	<div class="block" id="b{{ block.uid }}"></div>
+	<script type="text/javascript">
+	$("#b{{ block.uid }}").width({{ block.width * 150 }});
+	$("#b{{ block.uid }}").height({{ block.height * 150 }});
+	{% if block.color %}
+	$("#b{{ block.uid }}").css("background-color","{{block.color}}");
 	{% endif %}
+	</script>
 {% endfor %}
 </div>
 </body>
