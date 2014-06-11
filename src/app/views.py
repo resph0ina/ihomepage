@@ -1,21 +1,25 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, flash, redirect, session, request
+from flask import Flask, render_template, flash, redirect, session, request, g
 from app import app, database, block
 import json
+
+@app.before_request
+def before_request():
+    g.blocks = json.loads(session['ihomepage'])
+
 
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
     if not session.has_key('ihomepage') or True:
-        default_blocks = block.initial_blocks
+        block.Block.uid = 0
         b1 = block.Block(20,10,'test')
         b1.width = 1
         b2 = block.Block(20,10,'test')
         b2.width = 2
         b2.height = 2
         b2.color='green'
-        default_blocks.append(b1)
-        default_blocks.append(b2)
+        default_blocks = [b1,b2]
         session['ihomepage'] = json.dumps(default_blocks, default = block.object2dict)
 
     blocks = json.loads(session['ihomepage'])
