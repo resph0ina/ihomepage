@@ -1,0 +1,84 @@
+body {
+	background-color:"white";
+	padding:5px;
+}
+
+.content{
+	margin-left: 100px;
+	margin-right: 100px;
+}
+
+.greenblock{
+	margin: 10px;
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	position: absolute;
+}
+.redblock{
+	width: 200px;
+	height: 200px;
+	background-color: rgb(250,100,100);
+	/*position: absolute;*/
+}
+
+.block{
+	-webkit-box-shadow: 0 0 4px #000;
+	-moz-box-shadow: 0 0 4px #000;
+	box-shadow: 0 0 4px #000;
+	-webkit-transition: -webkit-box-shadow .3s ease-out;
+	-moz-transition: -moz-box-shadow .3s ease-out;
+	transition: box-shadow .3s ease-out;
+
+	margin: 5px;
+	float:left;
+	background-color: rgb(250,100,100);
+	padding: 10px;
+	font-size: 20px;
+	/*position: absolute;*/
+}
+
+.block:hover {
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 12px #000;
+	-moz-box-shadow: 0 0 12px #000;
+	box-shadow: 0 0 12px #000;
+}
+
+.searchblock{
+	margin: 10px;
+	/*width: 900px;*/
+	height: 40px;
+	padding: 50px;
+	TEXT-ALIGN: center;
+}
+#center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }
+
+.searchbar{
+	width: 500px;
+	height: 32px;
+	size:10px;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	vertical-align:40%;
+}
+.searchbtn{
+	width: 60px;
+	height: 38px;
+	font-size: 18px;
+	display: inline-block;
+	position: relative;
+	vertical-align:50%;
+}
+.briefviewblock{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+}
+.searchbarimg{
+	width: 70px;
+	height: 35px;
+	display: inline-block;
+	position: relative;
+	vertical-align:text-top;}
