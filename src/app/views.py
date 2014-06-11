@@ -1,11 +1,27 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, flash, redirect, session, request
-from app import app, database
+from app import app, database, block
+import json
 
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
+    if not session.has_key('ihomepage') or True:
+        default_blocks = block.initial_blocks
+        b1 = block.Block(20,10,'test')
+        b1.width = 1
+        b2 = block.Block(20,10,'test')
+        b2.width = 2
+        b2.height = 2
+        b2.color='green'
+        default_blocks.append(b1)
+        default_blocks.append(b2)
+        session['ihomepage'] = json.dumps(default_blocks, default = block.object2dict)
+
+    blocks = json.loads(session['ihomepage'])
     return render_template('ihomepage.html',
-                           session = session)
+                           session = session,
+                           blocks = blocks)
     
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
@@ -45,6 +61,17 @@ def login():
 def logout():
     del(session['username'])
     return redirect('ihomepage')
+
+@app.route('/setting', methods = ['GET', 'POST'])
+def setting():
+    postfix = ""
+    if (request.form.has_key('submit')):
+        
+        postfix = "<br>your change is saved successfully"
+    blocks = json.loads(session['ihomepage'])
+    return render_template('setting.html',
+                           session = session,
+                           blocks = blocks)+postfix
 
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
