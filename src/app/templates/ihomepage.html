@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>blocks</title>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./egg/egg.js"></script>
+<script type="text/javascript" src="./es.js"></script>
+<link rel="stylesheet" type="text/css" media="all" href="./egg/egg.css" />
+<link rel="stylesheet" type="text/css" media="all" href="./es.css" /> 
+
+<style type="text/css">
+<!--
+.greenblock{
+	
+	width: 200px;
+	height: 200px;
+	background-color: green;
+	position: absolute;
+}
+.redblock{
+	width: 200px;
+	height: 200px;
+	background-color: red;
+	position: absolute;
+}
+.searchblock{
+	width: 900px;
+	height: 40px;
+	position: absolute;
+	
+}
+.searchbar{
+	width: 500px;
+	height: 32px;
+	size:10px;
+	font-size: 20px;
+	display: inline-block;
+	position: relative;
+	vertical-align:45%;
+}
+.searchbtn{
+	width: 60px;
+	height: 38px;
+	font-size: 18px;
+	display: inline-block;
+	position: relative;
+	vertical-align:54%;
+}
+.briefviewblock{
+	width: 200px;
+	height: 200px;
+	position: absolute;
+
+
+}
+.searchbarimg{
+	width: 70px;
+	height: 35px;
+	display: inline-block;
+	position: relative;
+	vertical-align:text-top;}
+
+-->
+</style>
+</head>
+
+<body style="background-color:grey">
+<!--
+
+<div class="greenblock" id="gblock1" style="left:20px;top:80px">
+
+	
+</div>
+
+<div class="redblock" id="rblock1" style="left:320px;top:80px">
+	
+</div>
+-->
+<div class="searchblock" id="sblock1" style="left:20px;top:10px">
+	<span>
+	    <select name="se" id="SEdropdown" class="egg_imagedropdown">
+  			<option>baidulittlelogo.png</option>
+  			<option>binglittlelogo.png</option>
+       </select>
+	</span>
+	<form name="search" id="SEform" onsubmit="javascript:searchsubmit();" action="http://www.baidu.com/" style="display:inline-block" method="get">
+
+
+	<span>
+		<input class="searchbar" id="q" name="q" type="text"/>
+	</span>
+	<span>
+		<input class="searchbtn" type="submit" value="搜索">
+	</span>
+	</form>
+
+	<script>
+	function searchsubmit(){
+
+		var searchengine=document.getElementById("SEdropdown").value;
+
+
+		if (searchengine=="baidulittlelogo.png"){
+					var bdstr=document.getElementById("q").value;
+					var bdstr2="http://www.baidu.com/#wd="+bdstr;
+					document.getElementById("SEform").action=bdstr2;
+		}
+		else
+			if(searchengine=="binglittlelogo.png"){
+				var bistr="http://cn.bing.com/"
+				document.getElementById("SEform").action=bistr;
+
+			}
+	}
+		
+	</script>
+</div>
+
+
+</body>
