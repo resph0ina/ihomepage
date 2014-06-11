@@ -64,10 +64,26 @@ def logout():
 
 @app.route('/setting', methods = ['GET', 'POST'])
 def setting():
+    blocks = json.loads(session['ihomepage'])
+    maxuid = 0
+    idmap = {}
+    num = 0
+    for bk in blocks:
+        if bk['uid'] > maxuid:
+            maxuid = bk['uid']
+            idmap[bk['uid']] = num
+            num = num+1
     postfix = ""
-    if (request.form.has_key('submit')):
-        
-        postfix = "<br>your change is saved successfully"
+    if (request.form.has_key('change')):
+        postfix = "<br>all your change is saved successfully"
+    else:
+        for i in range(1, maxuid+1):
+            if (request.form.has_key('change'+str(i))):
+                postfix = "<br>your change is saved successfully"+str(i)
+            if (request.form.has_key('delete'+str(i))):
+                del blocks[idmap[i]]
+                session['ihomepage'] = json.dumps(blocks, default = block.object2dict)
+                postfix = "<br>delete successfully"+str(i)
     blocks = json.loads(session['ihomepage'])
     return render_template('setting.html',
                            session = session,
