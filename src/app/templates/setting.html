@@ -29,6 +29,7 @@ alert(document.getElementById('content').innerHTML);
 {% for block in blocks %}
 
 	name:<input type="text" value="{{block.name}}" name="name_{{block.uid}}" autocomplete="off"/>
+	config:<input type="text" value="{{block.config}}" name="config_{{block.uid}}" autocomplete="off"/>
 	width:<input type="text" value="{{block.width}}" name="width_{{block.uid}}" style="width:15px" autocomplete="off"/>
 	height:<input type="text" value="{{block.height}}" name="height_{{block.uid}}" style="width:15px" autocomplete="off"/>
 	<input type="submit" value="删除" name="delete_{{block.uid}}" autocomplete="off"><br>
