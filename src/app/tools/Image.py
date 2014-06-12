@@ -1,5 +1,10 @@
 from flask import Flask, render_template
+import json
 
 class Image:
-    def render(config):
-        return render_template("Image.html", config = config)
+    def __init__(self):
+        a = 0
+        
+    def render(self, config):
+        urls = json.loads(config)
+        return render_template("Image.html", urls = urls)
