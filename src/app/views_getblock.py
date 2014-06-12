@@ -1,9 +1,11 @@
 from flask import Flask, render_template, flash, redirect, session, request, g, make_response
 from app import app, database, block
 from modules import *
+from tools import *
 import json, urllib2
 
 services = {'baidu.news': TestGrabber.TestGrabber(), 'renren.status': RenrenGrabber.RenrenGrabber()}
+tools = {'image': Image.Image()}
 
 @app.route('/getblock/<blockId>', methods = ['GET', 'POST'])
 def getblock(blockId):
@@ -13,6 +15,8 @@ def getblock(blockId):
 	b = fetch[0]
 	if services.has_key(b.name):
 		b.content['raw'] = json.loads(getservice(b.name))
+	elif tools.has_key(b.name):
+                return tools[b.name].render(b.config)
 	else:
 		b.content['raw'] = 'Default'
 	return render_template('block_textlines.html', block = b)
