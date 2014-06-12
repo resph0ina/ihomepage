@@ -25,8 +25,14 @@ def login(username, password):
         return 'wrong password'
     return 'success'
 
-def modify(user):
-    name = user.username
-    user = models.User.query.filter_by(username=name).first()
+def modifysetting(username, setting):
+    user = models.User.query.filter_by(username=username).first()
+    user.homepage = setting
+    db.session.add(user)
+    db.session.commit()
     return 'success'
+
+def getuserbyname(username):
+    user = models.User.query.filter_by(username=username).first()
+    return user
 

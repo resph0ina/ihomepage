@@ -2,6 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+function jsfso(){
+var fso, tf; 
+fso = new ActiveXObject("Scripting.FileSystemObject"); 
+tf = fso.CreateTextFile("C:\\Users\\lenovo\\Desktop\\t.txt", true); 
+tf.WriteLine("hehehe") ; 
+tf.Close(); 
+alert(document.getElementById('content').innerHTML);
+}
+</script>
 </head>
 
 <body>
@@ -23,6 +33,11 @@
 <input type="submit" value="添加" name="add" autocomplete="off">
 </form>
 
+<form action="" method=post enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit name="upload" value=Upload>
+    </form>
+
 <a href=/>首页</a>
 {% if session.has_key('username') %}
 {{session['username']}}
@@ -30,6 +45,13 @@
 {% else %}
 <a href=/register>注册</a>
 <a href=/login>登录</a>
+{% endif %}
+<br>
+<a href=/downloadsetting>下载配置文件</a>
+
+{% if session.has_key('username') %}
+<a href=/dbupload>上传配置到服务器</a>
+<a href=/dbdownload>从服务器下载配置</a>
 {% endif %}
 
 </body>
