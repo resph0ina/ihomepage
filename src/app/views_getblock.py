@@ -1,7 +1,7 @@
 from flask import Flask, render_template, flash, redirect, session, request, g, make_response
 from app import app, database, block
 from modules import *
-import json
+import json, urllib2
 
 services = {'baidu.news': TestGrabber.TestGrabber(), 'renren.status': RenrenGrabber.RenrenGrabber()}
 
@@ -23,6 +23,8 @@ def infoservice():
 def getservice(name):
 	if services.has_key(name):
 		grabber = services[name]
+		if request.form.has_key('username'):
+			return json.dumps(grabber.grab(request.form['username'], request.form['password']))
 		return json.dumps(grabber.grab())
 	else:
 		return infoservice()
