@@ -2,6 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+function jsfso(){
+var fso, tf; 
+fso = new ActiveXObject("Scripting.FileSystemObject"); 
+tf = fso.CreateTextFile("C:\\Users\\lenovo\\Desktop\\t.txt", true); 
+tf.WriteLine("hehehe") ; 
+tf.Close(); 
+alert(document.getElementById('content').innerHTML);
+}
+</script>
 </head>
 
 <body>
@@ -22,6 +32,16 @@
 	height:<input type="text" name="height" style="width:15px" autocomplete="off"/>
 <input type="submit" value="添加" name="add" autocomplete="off">
 </form>
+
+<input type="button" value="导出" name="export" onclick="jsfso()" autocomplete="off">
+
+<div class="file-box">
+  <form action="" method="post" enctype="multipart/form-data">
+ <input type='text' name='textfield' id='textfield' class='txt' />  
+  <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+ <input type="submit" name="upload" class="btn" value="上传" />
+  </form>
+</div>
 
 <a href=/>首页</a>
 {% if session.has_key('username') %}
