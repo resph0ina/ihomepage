@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, flash, redirect, session, request, g
+from flask import Flask, render_template, flash, redirect, session, request, g, make_response
 from app import app, database, block
 from utils import *
 import json
@@ -30,7 +30,14 @@ def ihomepage():
     return render_template('ihomepage.html',
                            session = session,
                            blocks = blocks)
-    
+
+@app.route('/downloadsetting', methods = ['GET', 'POST'])
+def downloadsetting():
+    response = make_response(session['ihomepage'])
+    response.headers['Content-Type']='application/octet-stream'
+    response.headers['Content-Disposition']='attachment; filename=setting.sd'
+    return response
+
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     #user submit
@@ -113,7 +120,10 @@ def setting():
     #upload
     elif (request.form.has_key('upload')):
         postfix = "<br>upload success"
-        print request.form
+        uploadfiles = request.files['file']
+        print uploadfiles
+        for f in uploadfiles:
+            session['ihomepage'] = f
     #delete    
     else:
         for i in range(1, maxuid+1):
@@ -126,6 +136,15 @@ def setting():
                            session = session,
                            blocks = blocks)+postfix
 
+@app.route('/dbupload', methods = ['GET', 'POST'])
+def dbupload():
+    print 1
+    return redirect('/setting')
+
+@app.route('/dbdownload', methods = ['GET', 'POST'])
+def dbdownload():
+    print 2
+    return redirect('/setting')
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
 def registersuccess():
