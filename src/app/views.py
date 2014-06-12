@@ -94,16 +94,32 @@ def setting():
                 blocks[idmap[int(uid)]][key] = int(request.form[i])
             else:
                 blocks[idmap[int(uid)]][key] = request.form[i]
-            session['ihomepage'] = json.dumps(blocks, default = block.object2dict)
+            session['ihomepage'] = json.dumps(blocks, default = object2dict)
     #add
     elif (request.form.has_key('add')):
         postfix = "<br>add successfully"
+        newblock = block.Block("test")
+        newbk = object2dict(newblock)
+        for i in request.form.keys():
+            if (newbk.has_key(i)):
+                if request.form.get(i) == "":
+                    continue
+                if type(newbk[i]) is types.IntType:
+                    newbk[i] = int(request.form.get(i))
+                else:
+                    newbk[i] = request.form.get(i)
+        blocks.append(newbk)
+        session['ihomepage'] = json.dumps(blocks, default = object2dict)
+    #upload
+    elif (request.form.has_key('upload')):
+        postfix = "<br>upload success"
+        print request.form
     #delete    
     else:
         for i in range(1, maxuid+1):
             if (request.form.has_key('delete_'+str(i))):
                 del blocks[idmap[i]]
-                session['ihomepage'] = json.dumps(blocks, default = block.object2dict)
+                session['ihomepage'] = json.dumps(blocks, default = object2dict)
                 postfix = "<br>delete successfully"+str(i)
     blocks = json.loads(session['ihomepage'])
     return render_template('setting.html',
