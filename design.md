@@ -33,8 +33,8 @@
 				POST数据：json {action:%s, width:%d, height:%d}
 			返回：json {type:%s（指定renderer）, data:{[每一项的数据，格式依据renderer要求]}}
 			
-			textlines : [(name:string, text:string)]
-			pictextlines : [(name:string, pic:urlstring, text:string)]
+			textlines : [{name:string, text:string}]
+			pictextlines : [{name:string, pic:urlstring, text:string}]
 			image : [pic:urlstring]
 			raw : content:string
 			
