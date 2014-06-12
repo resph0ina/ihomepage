@@ -138,12 +138,13 @@ def setting():
 
 @app.route('/dbupload', methods = ['GET', 'POST'])
 def dbupload():
-    print 1
+    database.modifysetting(session['username'], session['ihomepage'])
     return redirect('/setting')
 
 @app.route('/dbdownload', methods = ['GET', 'POST'])
 def dbdownload():
-    print 2
+    user = database.getuserbyname(session['username'])
+    session['ihomepage'] = user.homepage
     return redirect('/setting')
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
