@@ -8,7 +8,9 @@ services = {'baidu.news': TestGrabber.TestGrabber(), 'renren.status': RenrenGrab
 @app.route('/getblock/<blockId>', methods = ['GET', 'POST'])
 def getblock(blockId):
 	# b = block.Block(1,1,'test')
-	b = g.blocks[int(blockId[1:]) - 1]
+	fetch = [i for i in g.blocks if i.uid == int(blockId[1:])]
+	if len(fetch) == 0 : return "Can't find block in session!"
+	b = fetch[0]
 	if services.has_key(b.name):
 		b.content['raw'] = json.loads(getservice(b.name))
 	else:
