@@ -1,16 +1,16 @@
-from flask import Flask, render_template, flash, redirect, session, request, g
+from flask import Flask, render_template, flash, redirect, session, request, g, make_response
 from app import app, database, block
 from modules import *
 import json
 
-services = {'baidu.news': TestGrabber.TestGrabber()}
+services = {'baidu.news': TestGrabber.TestGrabber(), 'renren.status': RenrenGrabber.RenrenGrabber()}
 
 @app.route('/getblock/<blockId>', methods = ['GET', 'POST'])
 def getblock(blockId):
 	# b = block.Block(1,1,'test')
 	b = g.blocks[int(blockId[1:]) - 1]
 	if services.has_key(b.name):
-		b.content['raw'] = getservice(b.name)
+		b.content['raw'] = json.loads(getservice(b.name))
 	else:
 		b.content['raw'] = 'Default'
 	return render_template('block_textlines.html', block = b)
@@ -23,6 +23,6 @@ def infoservice():
 def getservice(name):
 	if services.has_key(name):
 		grabber = services[name]
-		return grabber.grab()
+		return json.dumps(grabber.grab())
 	else:
 		return infoservice()

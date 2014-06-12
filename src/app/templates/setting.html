@@ -15,6 +15,16 @@ alert(document.getElementById('content').innerHTML);
 </head>
 
 <body>
+<div style="float:right">
+<a href=/>首页</a>
+{% if session.has_key('username') %}
+{{session['username']}}
+<a href=/logout>登出</a>
+{% else %}
+<a href=/register>注册</a>
+<a href=/login>登录</a>
+{% endif %}
+</div>
 <form action="" method="POST">
 {% for block in blocks %}
 
@@ -38,17 +48,9 @@ alert(document.getElementById('content').innerHTML);
          <input type=submit name="upload" value=Upload>
     </form>
 
-<a href=/>首页</a>
-{% if session.has_key('username') %}
-{{session['username']}}
-<a href=/logout>登出</a>
-{% else %}
-<a href=/register>注册</a>
-<a href=/login>登录</a>
-{% endif %}
-<br>
-<a href=/downloadsetting>下载配置文件</a>
+<input type=button name="down" value="下载配置文件" onClick="window.location='/downloadsetting'">
 
+<br>
 {% if session.has_key('username') %}
 <a href=/dbupload>上传配置到服务器</a>
 <a href=/dbdownload>从服务器下载配置</a>

@@ -23,6 +23,7 @@ body {
 }
 
 .block{
+	font-family:"Consolas","Times New Roman","楷体_GB2312","楷体","华文楷体","宋体";
 	-webkit-box-shadow: 2px 2px 4px #000;
 	-moz-box-shadow: 0 0 4px #000;
 	box-shadow: 2px 2px 4px #000;
@@ -38,8 +39,10 @@ body {
 	/*position: absolute;*/
 }
 
+.wrap { table-layout:fixed; word-break: break-all; overflow:hidden; } 
+
 .block:hover {
-	cursor: pointer;
+	/*cursor: pointer;*/
 	-webkit-box-shadow: 4px 4px 12px #000;
 	-moz-box-shadow: 0 0 12px #000;
 	box-shadow: 4px 4px 12px #000;

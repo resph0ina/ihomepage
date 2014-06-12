@@ -7,14 +7,14 @@ import types
 
 @app.before_request
 def before_request():
-    if session.has_key('ihomepage'):
+    if session.has_key('ihomepage') and session['ihomepage'] != None:
         g.blocks = [dict2object(i) for i in json.loads(session['ihomepage'])]
 
 
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage'):
+    if not session.has_key('ihomepage') or session['ihomepage'] == None:
         block.Block.uid = 0
         b1 = block.Block('textlines')
         b1.name = 'baidu.news'
