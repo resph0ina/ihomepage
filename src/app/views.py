@@ -89,6 +89,13 @@ def setting():
     #add
     if (request.form.has_key('add')):
         flash("add success")
+        block = Block('textlines')
+        block.name = request.form.get('name')
+        blocks.append(block)
+        ss = []
+        for i in blocks:
+            ss.append(object2dict(i))
+        session['ihomepage'] = json.dumps(ss)
     #upload
     elif (request.form.has_key('upload')):
         uploadfiles = request.files['file']
