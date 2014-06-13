@@ -1,6 +1,8 @@
-<div class="blocktitle">{{ content.name }}</div>
-<div class="blockcontent">
+<div class="blocktitle">{{ content.name }}
+	<img src='static/opennew.png' 
+	onclick="javascipt:window.open('{{ content.url }}')"></div>
 
+<div class="blockcontent">
 {% if content.type == 'raw' %}
 <p class="wrap">{{ content.data }}</p>
 </div>
@@ -16,10 +18,14 @@
 </div>
 {% elif content.type == 'imgtextlines' %}
 <!-- <div class="blockcontent"> -->
+<table class='wrap'>
 	{% for line in content.data%}
-		<p style="vertical-align:top"><img src="{{ line.image }}" width="50" />
-		{{ line.text }}</p>		
+	<tr style="vertical-align:top"><td>
+		<img src="{{ line.image }}" width="50" /></td><td>
+		{{ line.text }}	
+	</td></tr>
 	{% endfor %}
+</table>
 </div>
 {% elif content.type == 'images' %}
 <!-- <div class="blockcontent"> -->

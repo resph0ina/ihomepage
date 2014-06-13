@@ -1,11 +1,18 @@
 body {
-	background-color:"white";
 	padding:5px;
+	font-family:"Trebuchet MS", tahoma, arial;
+	font-size:12px;
+	background-color:#ccdce5;
 }
 
 .content{
 	margin-left: 100px;
 	margin-right: 100px;
+}
+
+table tr td{
+	/*padding:4px;*/
+	/*background-color: #dddddd;*/
 }
 
 .greenblock{
@@ -38,7 +45,7 @@ body {
 	/*position: absolute;*/
 }
 
-.wrap, .blockcontent.p { 
+.wrap { 
 	table-layout:fixed;
 	word-break: break-all;
 	overflow:hidden; } 
@@ -51,7 +58,14 @@ body {
 }
 
 .blockcontent {
-	margin: 10px
+	margin: 10px;
+	overflow-y:auto;
+}
+
+.blockcontent img{
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
 }
 
 .blocktitle{
@@ -64,6 +78,13 @@ body {
 	font-size: 15px;
 	font-weight: bold;
 	font-family: '微软雅黑';
+}
+
+.blocktitle img{
+	cursor: pointer;
+	height: 16px;
+	margin: 2px;
+	float: right;
 }
 
 .searchblock{

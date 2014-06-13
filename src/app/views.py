@@ -14,10 +14,10 @@ def before_request():
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage') or session['ihomepage'] == None:
+    if not session.has_key('ihomepage') or session['ihomepage'] == None or True:
         block.Block.uid = 0
         b1 = block.Block('textlines')
-        b1.name = 'baidu.news'
+        b1.name = 'weather.simple'
         b1.width = 1
         b2 = block.Block('textlines')
         b2.name = 'renren.status'

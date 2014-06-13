@@ -16,5 +16,7 @@ OPENID_PROVIDERS = [
 SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'app.db')
 SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
-SERVICES = {'baidu.news': TestGrabber.TestGrabber(), 'renren.status': RenrenGrabber.RenrenGrabber()}
+SERVICES = {'baidu.news': TestGrabber.TestGrabber(), 
+	'renren.status': RenrenGrabber.RenrenGrabber(),
+	'weather.simple': WeatherGrabber.WeatherGrabber()}
 TOOLS = {'image': Image.Image()}

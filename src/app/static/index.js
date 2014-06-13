@@ -20,10 +20,4 @@ $(document).ready(function(){
  //        $(loadingId).hide();
  //        $(destId).show();
  //    });
-	// $(".block").mouseenter(function(){
-	// 	$(this).addClass("hover");
-	// });
-	// $(".block").mouseleave(function(){
-	// 	$(this).removeClass("hover");
-	// });
 });
