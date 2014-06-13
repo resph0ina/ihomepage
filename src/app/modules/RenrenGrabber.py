@@ -218,7 +218,8 @@ class RenrenGrabber:
     def grab(self, *arg):
         if self.__isLogin == False : self.Create(arg[0],arg[1])
         if self.__isLogin == False : return []
-        return {'name':u'人人网 好友状态','type':'imgtextlines','data':self.GetMsg()}
+        return {
+        'url':'http://www.renren.com','name':u'人人网 好友状态','type':'imgtextlines','data':self.GetMsg()}
 
     # 发送个人状态
     def PostMsg(self, msg):
