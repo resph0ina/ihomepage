@@ -1,1 +1,1 @@
-__all__ = ["TestGrabber", "RenrenGrabber",'WeatherGrabber','BaiduWcup','Baiduword']
+__all__ = ["TestGrabber", "RenrenGrabber",'WeatherGrabber','BaiduWcup','Baiduword','Douban']

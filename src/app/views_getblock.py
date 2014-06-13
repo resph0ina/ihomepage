@@ -23,7 +23,7 @@ def getblock(blockId):
 		return app.config['TOOLS'][b.name].render(blockId)
 	else:
 		b.content = {'type':'raw','data':'Empty block'}
-	# print b.content
+	print b.content
 	return render_template('block_dynamic.html', content = b.content)
 
 @app.route('/service/')

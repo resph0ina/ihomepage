@@ -4,8 +4,7 @@
 
 <div class="blockcontent">
 {% if content.type == 'raw' %}
-<p class="wrap">{{ content.data }}</p>
-</div>
+{{ content.data }}
 {% elif content.type == 'textlines' %}
 <!-- <div class="blockcontent"> -->
 	{% for line in content.data%}
@@ -15,7 +14,6 @@
 		<p>{{ line.text }}</p>
 		{% endif %}
 	{% endfor %}
-</div>
 {% elif content.type == 'imgtextlines' %}
 <!-- <div class="blockcontent"> -->
 <table class='wrap'>
@@ -27,7 +25,6 @@
 	</td></tr>
 	{% endfor %}
 </table>
-</div>
 {% elif content.type == 'images' %}
 <!-- <div class="blockcontent"> -->
 	{% for line in content.data%}

@@ -14,7 +14,7 @@ def before_request():
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage') or session['ihomepage'] == None:
+    if not session.has_key('ihomepage') or session['ihomepage'] == None or True:
         block.Block.uid = 0
         b1 = block.Block('textlines')
         # b1.name = 'weather.simple'
@@ -22,9 +22,9 @@ def ihomepage():
         b1.width = 1
         b2 = block.Block('textlines')
         # b2.name = 'renren.status'
-        b2.name = 'baidu.worldcup'
-        b2.width = 2
-        b2.height = 2
+        b2.name = 'douban.recent'
+        b2.width = 3
+        b2.height = 1
         b2.color='green'
         b3 = block.Block('textlines')
         b3.name = 'image'
@@ -37,7 +37,7 @@ def ihomepage():
     blocks = json.loads(session['ihomepage'])
     return render_template('ihomepage.html',
                            session = session,
-                           blocks = blocks)
+                           blocks = blocks, names = app.config['BLOCKNAME'])
 
 @app.route('/downloadsetting', methods = ['GET', 'POST'])
 def downloadsetting():
