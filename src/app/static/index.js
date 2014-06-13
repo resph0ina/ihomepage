@@ -1,10 +1,16 @@
+var rand={};
+rand.get=function(begin,end){
+	return Math.floor(Math.random()*(end-begin))+begin;
+}
+
 $(document).ready(function(){
 	$('.egg_slideshow').EggSlideshow();
 	$('.egg_accordion').EggAccordion({width:516});
 	$('.egg_imagedropdown').EggImageDropdown();
-	$('.egg_preload').EggPreload({complete:function(){alert('This is a demo of the EggPreload plugin - all images are now loaded!');}});
 	$(".block").fadeIn("slow");
 	$(".block").each(function(){
+		v=rand.get(0,360);
+		$(this).css('background-color',"hsl("+v+",50%,80%)");		
 		$(this).load('/getblock/'+$(this).attr('id'));
 	});
 	// $.get('/getblock/'+, {

@@ -10,25 +10,6 @@ body {
 	margin-right: 100px;
 }
 
-table tr td{
-	/*padding:4px;*/
-	/*background-color: #dddddd;*/
-}
-
-.greenblock{
-	margin: 10px;
-	width: 200px;
-	height: 200px;
-	background-color: green;
-	position: absolute;
-}
-.redblock{
-	width: 200px;
-	height: 200px;
-	background-color: rgb(250,100,100);
-	/*position: absolute;*/
-}
-
 .block{
 	font-family:"Consolas","Times New Roman","微软雅黑","楷体","华文楷体","宋体";
 	-webkit-box-shadow: 2px 2px 4px #000;
@@ -62,13 +43,25 @@ table tr td{
 	margin: 10px;
 	overflow-y:auto;
 	height: 100%;
-	
 }
 
 .blockcontent img{
 border-radius: 5px;
 -webkit-border-radius: 5px;
 -moz-border-radius: 5px;
+}
+
+.blockcontent table td{
+	padding-bottom: 10px
+}
+
+.blockcontent p{
+	margin-top:0px;
+	margin-bottom: 8px
+}
+
+.blockcontent a{
+	color:#009;
 }
 
 .blocktitle{
@@ -127,3 +120,25 @@ border-radius: 5px;
 	display: inline-block;
 	position: relative;
 	vertical-align:text-top;}
+
+::-webkit-scrollbar-track-piece{
+background-color:rgba(0,0,0,0);/*滚动条的背景颜色*/
+-webkit-border-radius:0;/*滚动条的圆角宽度*/
+}
+::-webkit-scrollbar{
+width:4px;/*滚动条的宽度*/
+height:8px;/*滚动条的高度*/
+}
+::-webkit-scrollbar-thumb:vertical{/*垂直滚动条的样式*/
+height:50px;
+background-color:rgba(0,0,0,0.3);
+-webkit-border-radius:4px;
+/*outline:2px solid #fff;*/
+/*outline-offset:-2px;*/
+/*border:2px solid #fff;*/
+}
+::-webkit-scrollbar-thumb:hover{/*滚动条的hover样式*/
+height:50px;
+background-color:rgba(0,0,0,0.8);
+-webkit-border-radius:4px;
+}

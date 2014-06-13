@@ -29,5 +29,5 @@ def getsetting(blockId):
             return redirect('/setting')
         return tools[b.name].rendersetting(blockId)
     else:
-        return "wtf"
-    return "wtf"
+        return ''
+    return ''

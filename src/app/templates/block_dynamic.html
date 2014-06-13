@@ -4,8 +4,7 @@
 
 <div class="blockcontent">
 {% if content.type == 'raw' %}
-<p class="wrap">{{ content.data }}</p>
-</div>
+{{ content.data }}
 {% elif content.type == 'textlines' %}
 <!-- <div class="blockcontent"> -->
 	{% for line in content.data%}
@@ -15,18 +14,17 @@
 		<p>{{ line.text }}</p>
 		{% endif %}
 	{% endfor %}
-</div>
 {% elif content.type == 'imgtextlines' %}
 <!-- <div class="blockcontent"> -->
 <table class='wrap'>
 	{% for line in content.data%}
 	<tr style="vertical-align:top"><td>
-		<img src="{{ line.image }}" width="50" /></td><td>
+		<img src="/service/getpic?url={{ line.image }}" width="50" />
+	</td><td>
 		{{ line.text }}	
 	</td></tr>
 	{% endfor %}
 </table>
-</div>
 {% elif content.type == 'images' %}
 <!-- <div class="blockcontent"> -->
 	{% for line in content.data%}

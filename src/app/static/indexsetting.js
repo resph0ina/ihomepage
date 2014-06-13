@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$(".block").fadeIn("slow");
-	$(".block").each(function(){
+	$(".blocksetting").each(function(){
 		$(this).load('/getsetting/'+$(this).attr('id'));
 	});
 	// $.get('/getblock/'+, {

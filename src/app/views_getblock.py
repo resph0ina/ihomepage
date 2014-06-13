@@ -10,12 +10,12 @@ def test():
 
 @app.route('/getblock/<blockId>', methods = ['GET', 'POST'])
 def getblock(blockId):
-	# print url_for(getservice)
-	# b = block.Block(1,1,'test')
 	fetch = [i for i in g.blocks if i.uid == int(blockId[1:])]
 	if len(fetch) == 0 : return "Can't find block in session!"
 	b = fetch[0]
-	if app.config['SERVICES'].has_key(b.name):
+	if b.name == 'custom':
+		b.content = json.loads(urllib2.urlopen(b.config['custom']).read())
+	elif app.config['SERVICES'].has_key(b.name):
 		b.content = _getservice(b.name, 
 			{'username' : '18911029092', 'password' : 'THUcst)('})
 		#json.loads(getservice(b.name))
@@ -23,7 +23,7 @@ def getblock(blockId):
 		return app.config['TOOLS'][b.name].render(blockId)
 	else:
 		b.content = {'type':'raw','data':'Empty block'}
-	# print b.content
+	print b.content
 	return render_template('block_dynamic.html', content = b.content)
 
 @app.route('/service/')
@@ -35,10 +35,15 @@ def getservice(name):
 	return json.dumps(_getservice(name, request.form))
 
 def _getservice(name, datadict):
-	if app.config['SERVICES'].has_key(name):
-		grabber = app.config['SERVICES'][name]
-		if datadict.has_key('username'):
-			return grabber.grab(datadict['username'], datadict['password'])
-		return grabber.grab()
-	else:
-		return infoservice()
+	try:
+		if app.config['SERVICES'].has_key(name):
+			grabber = app.config['SERVICES'][name]
+			return grabber.grab(datadict)
+		else:
+			return infoservice()
+	except Exception, e:
+		raise e
+
+@app.route('/service/getpic')
+def getpicture():
+	return urllib2.urlopen(request.args.get('url'), timeout = 3).read()
