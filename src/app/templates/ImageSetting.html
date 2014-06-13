@@ -1,0 +1,13 @@
+<form method="POST" action="/getsetting/{{blockId}}">
+{% for i in range(0, num) %}
+	<input type="text" name="src_{{i}}" value="{{urls[i]}}">
+{% endfor %}
+<br>
+<input type="submit" value="change" name="change">
+</form>
+
+<form method="POST" action="/getsetting/{{blockId}}">
+<input type="text" name="srcadd">
+<br>
+<input type="submit" value="add" name="add">
+</form>

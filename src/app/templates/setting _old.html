@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script>
+function jsfso(){
+var fso, tf; 
+fso = new ActiveXObject("Scripting.FileSystemObject"); 
+tf = fso.CreateTextFile("C:\\Users\\lenovo\\Desktop\\t.txt", true); 
+tf.WriteLine("hehehe") ; 
+tf.Close(); 
+alert(document.getElementById('content').innerHTML);
+}
+</script>
+</head>
+
+<body>
+<div style="float:right">
+<a href=/>首页</a>
+{% if session.has_key('username') %}
+{{session['username']}}
+<a href=/logout>登出</a>
+{% else %}
+<a href=/register>注册</a>
+<a href=/login>登录</a>
+{% endif %}
+</div>
+<form action="" method="POST">
+{% for block in blocks %}
+
+	name:<input type="text" value="{{block.name}}" name="name_{{block.uid}}" autocomplete="off"/>
+	config:<input type="text" value="{{block.config}}" name="config_{{block.uid}}" autocomplete="off"/>
+	width:<input type="text" value="{{block.width}}" name="width_{{block.uid}}" style="width:15px" autocomplete="off"/>
+	height:<input type="text" value="{{block.height}}" name="height_{{block.uid}}" style="width:15px" autocomplete="off"/>
+	<input type="submit" value="删除" name="delete_{{block.uid}}" autocomplete="off"><br>
+{% endfor %}
+<input type="submit" value="全部修改" name="change" autocomplete="off">
+</form>
+
+<form action="" method="POST">
+	name:<input type="text" name="name" autocomplete="off"/>
+	width:<input type="text" name="width" style="width:15px" autocomplete="off"/>
+	height:<input type="text" name="height" style="width:15px" autocomplete="off"/>
+<input type="submit" value="添加" name="add" autocomplete="off">
+</form>
+
+<form action="" method=post enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit name="upload" value=Upload>
+    </form>
+
+<input type=button name="down" value="下载配置文件" onClick="window.location='/downloadsetting'">
+
+<br>
+{% if session.has_key('username') %}
+<a href=/dbupload>上传配置到服务器</a>
+<a href=/dbdownload>从服务器下载配置</a>
+{% endif %}
+
+</body>

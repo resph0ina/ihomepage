@@ -1,0 +1,6 @@
+{% for tag in index %}
+	{{tag[0]}}
+	{% for href in  tag[1] %}
+		<a href={{href[1]}}>{{href[0]}}</a>
+	{% endfor %}
+{% endfor %}

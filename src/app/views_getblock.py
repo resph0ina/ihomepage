@@ -5,7 +5,7 @@ from tools import *
 import json, urllib2
 
 services = {'baidu.news': TestGrabber.TestGrabber(), 'renren.status': RenrenGrabber.RenrenGrabber()}
-tools = {'image': Image.Image()}
+tools = {'image': Image.Image(), 'index': Index.Index()}
 
 @app.route('/getblock/<blockId>', methods = ['GET', 'POST'])
 def getblock(blockId):

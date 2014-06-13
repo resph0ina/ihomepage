@@ -1,1 +1,1 @@
-__all__ = ["Index", "Image"]
+__all__ = ["Index", "Image", "Service"]
