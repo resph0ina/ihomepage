@@ -141,12 +141,14 @@ def settingmodify(blockId):
 @app.route('/dbupload', methods = ['GET', 'POST'])
 def dbupload():
     database.modifysetting(session['username'], session['ihomepage'])
+    flash('upload to database success')
     return redirect('/setting')
 
 @app.route('/dbdownload', methods = ['GET', 'POST'])
 def dbdownload():
     user = database.getuserbyname(session['username'])
     session['ihomepage'] = user.homepage
+    flash('download form database success')
     return redirect('/setting')
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
