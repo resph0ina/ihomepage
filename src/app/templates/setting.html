@@ -15,10 +15,21 @@ alert(document.getElementById('content').innerHTML);
 </head>
 
 <body>
+<div style="float:right">
+<a href=/>首页</a>
+{% if session.has_key('username') %}
+{{session['username']}}
+<a href=/logout>登出</a>
+{% else %}
+<a href=/register>注册</a>
+<a href=/login>登录</a>
+{% endif %}
+</div>
 <form action="" method="POST">
 {% for block in blocks %}
 
-	type:<input type="text" value="{{block.style}}" name="style_{{block.uid}}" autocomplete="off"/>
+	name:<input type="text" value="{{block.name}}" name="name_{{block.uid}}" autocomplete="off"/>
+	config:<input type="text" value="{{block.config}}" name="config_{{block.uid}}" autocomplete="off"/>
 	width:<input type="text" value="{{block.width}}" name="width_{{block.uid}}" style="width:15px" autocomplete="off"/>
 	height:<input type="text" value="{{block.height}}" name="height_{{block.uid}}" style="width:15px" autocomplete="off"/>
 	<input type="submit" value="删除" name="delete_{{block.uid}}" autocomplete="off"><br>
@@ -27,29 +38,23 @@ alert(document.getElementById('content').innerHTML);
 </form>
 
 <form action="" method="POST">
-	type:<input type="text" name="style" autocomplete="off"/>
+	name:<input type="text" name="name" autocomplete="off"/>
 	width:<input type="text" name="width" style="width:15px" autocomplete="off"/>
 	height:<input type="text" name="height" style="width:15px" autocomplete="off"/>
 <input type="submit" value="添加" name="add" autocomplete="off">
 </form>
 
-<input type="button" value="导出" name="export" onclick="jsfso()" autocomplete="off">
+<form action="" method=post enctype=multipart/form-data>
+      <p><input type=file name=file>
+         <input type=submit name="upload" value=Upload>
+    </form>
 
-<div class="file-box">
-  <form action="" method="post" enctype="multipart/form-data">
- <input type='text' name='textfield' id='textfield' class='txt' />  
-  <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
- <input type="submit" name="upload" class="btn" value="上传" />
-  </form>
-</div>
+<input type=button name="down" value="下载配置文件" onClick="window.location='/downloadsetting'">
 
-<a href=/>首页</a>
+<br>
 {% if session.has_key('username') %}
-{{session['username']}}
-<a href=/logout>登出</a>
-{% else %}
-<a href=/register>注册</a>
-<a href=/login>登录</a>
+<a href=/dbupload>上传配置到服务器</a>
+<a href=/dbdownload>从服务器下载配置</a>
 {% endif %}
 
 </body>

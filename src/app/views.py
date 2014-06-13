@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import Flask, render_template, flash, redirect, session, request, g
+from flask import Flask, render_template, flash, redirect, session, request, g, make_response
 from app import app, database, block
 from utils import *
 import json
@@ -7,19 +7,20 @@ import types
 
 @app.before_request
 def before_request():
-    if session.has_key('ihomepage'):
+    if session.has_key('ihomepage') and session['ihomepage'] != None:
         g.blocks = [dict2object(i) for i in json.loads(session['ihomepage'])]
 
 
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage'):
+    if not session.has_key('ihomepage') or session['ihomepage'] == None:
         block.Block.uid = 0
         b1 = block.Block('textlines')
         b1.name = 'baidu.news'
         b1.width = 1
         b2 = block.Block('textlines')
+        b2.name = 'renren.status'
         b2.width = 2
         b2.height = 2
         b2.color='green'
@@ -30,7 +31,14 @@ def ihomepage():
     return render_template('ihomepage.html',
                            session = session,
                            blocks = blocks)
-    
+
+@app.route('/downloadsetting', methods = ['GET', 'POST'])
+def downloadsetting():
+    response = make_response(session['ihomepage'])
+    response.headers['Content-Type']='application/octet-stream'
+    response.headers['Content-Disposition']='attachment; filename=setting.sd'
+    return response
+
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     #user submit
@@ -113,7 +121,10 @@ def setting():
     #upload
     elif (request.form.has_key('upload')):
         postfix = "<br>upload success"
-        print request.form
+        uploadfiles = request.files['file']
+        print uploadfiles
+        for f in uploadfiles:
+            session['ihomepage'] = f
     #delete    
     else:
         for i in range(1, maxuid+1):
@@ -126,6 +137,16 @@ def setting():
                            session = session,
                            blocks = blocks)+postfix
 
+@app.route('/dbupload', methods = ['GET', 'POST'])
+def dbupload():
+    database.modifysetting(session['username'], session['ihomepage'])
+    return redirect('/setting')
+
+@app.route('/dbdownload', methods = ['GET', 'POST'])
+def dbdownload():
+    user = database.getuserbyname(session['username'])
+    session['ihomepage'] = user.homepage
+    return redirect('/setting')
 
 @app.route('/registersuccess', methods = ['GET', 'POST'])
 def registersuccess():
