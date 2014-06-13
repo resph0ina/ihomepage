@@ -22,4 +22,5 @@ BLOCKNAME = {u'百度热搜词':'baidu.hotword',
 	u'实时天气情况':'weather.simple',
 	u'世界杯今日明星':'baidu.worldcup',
 	u'自定义服务':'custom',
-	u'豆瓣最近收听':'douban.recent'}
+	u'豆瓣最近收听':'douban.recent',
+	u'自定义图片':'image'}

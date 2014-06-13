@@ -99,7 +99,6 @@ border-radius: 5px;
 	font-size: 20px;
 	display: inline-block;
 	position: relative;
-	vertical-align:40%;
 }
 .searchbtn{
 	width: 60px;
@@ -107,7 +106,7 @@ border-radius: 5px;
 	font-size: 18px;
 	display: inline-block;
 	position: relative;
-	vertical-align:50%;
+	vertical-align:5%;
 }
 .briefviewblock{
 	width: 200px;

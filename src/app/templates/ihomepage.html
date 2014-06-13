@@ -6,9 +6,10 @@
 <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='./egg/egg.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='./nicescroll/jquery.nicescroll.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='bootstrap.js') }}"></script>
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='egg/egg.css') }}" />
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./es.css') }}" /> 
+<link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./bootstrap.css') }}" /> 
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./main.css') }}" /> 
 
 </head>
@@ -16,7 +17,7 @@
 <body>
 
 
-<div style="float:right">
+<div style="float:right;margin:15px">
 <a href=/setting>页面设置</a>
 {% if session.has_key('username') %}
 {{session['username']}}

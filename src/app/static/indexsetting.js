@@ -1,6 +1,15 @@
+var rand={};
+rand.get=function(begin,end){
+	return Math.floor(Math.random()*(end-begin))+begin;
+}
+
 $(document).ready(function(){
 	$(".block").fadeIn("slow");
-	$(".blocksetting").each(function(){
+	$(".block").each(function(){	
+		v=rand.get(0,360);
+		$(this).css('background-color',"hsl("+v+",50%,80%)");
+	});
+	$(".blocksetting").each(function(){		
 		$(this).load('/getsetting/'+$(this).attr('id'));
 	});
 	// $.get('/getblock/'+, {
