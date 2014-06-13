@@ -23,7 +23,7 @@ body {
 }
 
 .block{
-	font-family:"Consolas","Times New Roman","楷体_GB2312","楷体","华文楷体","宋体";
+	font-family:"Consolas","Times New Roman","微软雅黑","楷体","华文楷体","宋体";
 	-webkit-box-shadow: 2px 2px 4px #000;
 	-moz-box-shadow: 0 0 4px #000;
 	box-shadow: 2px 2px 4px #000;
@@ -34,7 +34,7 @@ body {
 	float:left;
 	background-color: rgb(250,100,100);
 	/*padding: 10px;*/
-	font-size: 20px;
+	font-size: 16px;
 	/*position: absolute;*/
 }
 
@@ -52,6 +52,18 @@ body {
 
 .blockcontent {
 	margin: 10px
+}
+
+.blocktitle{
+	background: rgba(255, 255, 255, 0.5)!important;
+    background: #fff;
+    filter: alpha(opacity=50);  
+	height: 20px;
+	padding: 3px;
+	padding-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: '微软雅黑';
 }
 
 .searchblock{

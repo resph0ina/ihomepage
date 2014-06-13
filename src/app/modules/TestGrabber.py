@@ -5,4 +5,4 @@ class TestGrabber(object):
 		super(TestGrabber, self).__init__()
 
 	def grab(self, *arg):
-		return {'type':'textlines','data':[{'text':u'空空如也'}]}	
+		return {'name':u'测试','type':'textlines','data':[{'text':u'空空如也'}]}	

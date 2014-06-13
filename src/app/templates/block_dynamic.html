@@ -1,9 +1,11 @@
-{% if content.type == 'raw' %}
+<div class="blocktitle">{{ content.name }}</div>
 <div class="blockcontent">
+
+{% if content.type == 'raw' %}
 <p class="wrap">{{ content.data }}</p>
 </div>
 {% elif content.type == 'textlines' %}
-<div class="blockcontent">
+<!-- <div class="blockcontent"> -->
 	{% for line in content.data%}
 		{% if line.url %}
 		<p><a href="{{ line.url }}">{{ line.text }}</a></p>
@@ -13,16 +15,16 @@
 	{% endfor %}
 </div>
 {% elif content.type == 'imgtextlines' %}
-<div class="blockcontent">
+<!-- <div class="blockcontent"> -->
 	{% for line in content.data%}
 		<p style="vertical-align:top"><img src="{{ line.image }}" width="50" />
 		{{ line.text }}</p>		
 	{% endfor %}
 </div>
 {% elif content.type == 'images' %}
-<div class="blockcontent">
+<!-- <div class="blockcontent"> -->
 	{% for line in content.data%}
 		<img src="{{ line }}" width="100" />	
 	{% endfor %}
-</div>
 {% endif %}
+</div>
