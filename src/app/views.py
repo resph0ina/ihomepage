@@ -14,7 +14,7 @@ def before_request():
 @app.route('/')
 @app.route('/ihomepage', methods = ['GET', 'POST'])
 def ihomepage():
-    if not session.has_key('ihomepage') or session['ihomepage'] == None or True:
+    if not session.has_key('ihomepage') or session['ihomepage'] == None:
         block.Block.uid = 0
         b1 = block.Block('textlines')
         # b1.name = 'weather.simple'
@@ -91,9 +91,13 @@ def setting():
     #add
     if (request.form.has_key('add')):
         flash("add success")
-        block = Block('textlines')
-        block.name = request.form.get('name')
-        blocks.append(block)
+        bk = block.Block('textlines')
+        bk.name = request.form.get('name')
+        if request.form.get('width') != '':
+            bk.width = int(request.form.get('width'))
+        if request.form.get('height') != '':
+            bk.width = int(request.form.get('height'))
+        blocks.append(bk)
         ss = []
         for i in blocks:
             ss.append(object2dict(i))
