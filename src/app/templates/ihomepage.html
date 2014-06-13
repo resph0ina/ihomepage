@@ -6,6 +6,7 @@
 <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='./egg/egg.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='./nicescroll/jquery.nicescroll.min.js') }}"></script>
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='egg/egg.css') }}" />
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./es.css') }}" /> 
 <link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./main.css') }}" /> 
@@ -13,6 +14,8 @@
 </head>
 
 <body>
+
+
 <div style="float:right">
 <a href=/setting>页面设置</a>
 {% if session.has_key('username') %}
@@ -33,7 +36,7 @@
 	<div class="block" id="b{{ block.uid }}"></div>
 	<script type="text/javascript">
 	$("#b{{ block.uid }}").width({{ block.width * 150 }});
-	$("#b{{ block.uid }}").height({{ block.height * 150 }});
+	$("#b{{ block.uid }}").height({{ block.height * 150-40 }});
 	{% if block.color %}
 	$("#b{{ block.uid }}").css("background-color","{{block.color}}");
 	{% endif %}
@@ -41,4 +44,24 @@
 {% endfor %}
 
 </div>
+
+
+
+
 </body>
+
+<script>$(document).ready(function(){
+ $("#ex1").niceScroll();
+  $("#ex2").niceScroll({cursorcolor:"#A00"});
+});
+</script>
+<style>
+ <!--.Controls{position:absolute;z-index:9999;right:30px;top:10px;width:80px;height:30px;line-height:30px;background-color:#eee;opacity:0.5;font-size:10px;text-align:center;}
+ .Controls a{text-decoration:none;margin:10px 5px;}-->
+ .GoEdit{opacity: 0; position: fixed; top: -1px; right: -1px; padding: 5px 10px; background-color: rgb(204, 204, 204); color: rgb(51, 51, 51); text-shadow: rgb(255, 255, 255) 0px 1px 1px; border-top-right-radius: 5px; border: 1px solid rgb(153, 153, 153); text-decoration: none; font-style: normal; font-variant: normal; font-weight: normal; font-size: 12px; line-height: normal; font-family: 'Helvetica Neue', Arial, Helvetica; -webkit-transition: opacity 100ms ease-out; background-position: initial initial; background-repeat: initial initial; }    
+</style>
+<script type="text/javascript" src="/tools/jsbin/edit.js"></script>
+<script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F2b9232a7b0ced15280772333a4ec7c3a' type='text/javascript'%3E%3C/script%3E"));
+</script>
