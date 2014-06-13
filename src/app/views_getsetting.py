@@ -18,7 +18,7 @@ def getsetting(blockId):
     b = fetch[0]
     print b.name
     b.config = str(b.config)
-    if services.has_key(b.name):
+    if app.config['SERVICES'].has_key(b.name):
         if Service.Service().applysetting(blockId) == 'success':
             flash('success')
             return redirect('/setting')
