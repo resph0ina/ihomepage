@@ -8,7 +8,6 @@ from wtforms import TextField, BooleanField, FieldList
 def test():
 	return render_template('block_dynamic.html', content = {'type':'images','data':['http://hdn.xnimg.cn/photos/hdn121/20130504/1530/tiny_Bdgs_ec130002ad5c113e.jpg','http://hdn.xnimg.cn/photos/hdn121/20130504/1530/tiny_Bdgs_ec130002ad5c113e.jpg']})
 
-
 @app.route('/getblock/<blockId>', methods = ['GET', 'POST'])
 def getblock(blockId):
 	fetch = [i for i in g.blocks if i.uid == int(blockId[1:])]
@@ -21,7 +20,7 @@ def getblock(blockId):
 			{'username' : '18911029092', 'password' : 'THUcst)('})
 		#json.loads(getservice(b.name))
 	elif app.config['TOOLS'].has_key(b.name):
-		return tools[b.name].render(b.config)
+		return app.config['TOOLS'][b.name].render(blockId)
 	else:
 		b.content = {'type':'raw','data':'Empty block'}
 	# print b.content
