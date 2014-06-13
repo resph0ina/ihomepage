@@ -87,63 +87,44 @@ def logout():
 
 @app.route('/setting', methods = ['GET', 'POST'])
 def setting():
-    blocks = json.loads(session['ihomepage'])
-    maxuid = 0
-    idmap = {}
-    num = 0
-    for bk in blocks:
-        if bk['uid'] > maxuid:
-            maxuid = bk['uid']
-            idmap[bk['uid']] = num
-            num = num+1
-    postfix = ""
-    #change
-    if (request.form.has_key('change')):
-        postfix = "<br>all your change is saved successfully"
-        for i in request.form.keys():
-            if len(i.split('_')) <= 1:
-                continue
-            key = i.split('_')[0]
-            uid = i.split('_')[1]
-            if type(blocks[idmap[int(uid)]][key]) is types.IntType:
-                blocks[idmap[int(uid)]][key] = int(request.form[i])
-            else:
-                blocks[idmap[int(uid)]][key] = request.form[i]
-            session['ihomepage'] = json.dumps(blocks, default = object2dict)
+    blocks = g.blocks
     #add
-    elif (request.form.has_key('add')):
-        postfix = "<br>add successfully"
-        newblock = block.Block("test")
-        newbk = object2dict(newblock)
-        for i in request.form.keys():
-            if (newbk.has_key(i)):
-                if request.form.get(i) == "":
-                    continue
-                if type(newbk[i]) is types.IntType:
-                    newbk[i] = int(request.form.get(i))
-                else:
-                    newbk[i] = request.form.get(i)
-        blocks.append(newbk)
-        session['ihomepage'] = json.dumps(blocks, default = object2dict)
+    if (request.form.has_key('add')):
+        flash("add success")
     #upload
     elif (request.form.has_key('upload')):
-        postfix = "<br>upload success"
         uploadfiles = request.files['file']
-        print uploadfiles
         for f in uploadfiles:
+            flash('upload success')
             session['ihomepage'] = f
-    #delete    
-    else:
-        for i in range(1, maxuid+1):
-            if (request.form.has_key('delete_'+str(i))):
-                del blocks[idmap[i]]
-                session['ihomepage'] = json.dumps(blocks, default = object2dict)
-                postfix = "<br>delete successfully"+str(i)
-    print session['ihomepage']
     blocks = json.loads(session['ihomepage'])
     return render_template('setting.html',
                            session = session,
-                           blocks = blocks)+postfix
+                           blocks = blocks)
+
+@app.route('/settingmodify/<blockId>', methods = ['GET', 'POST'])
+def settingmodify(blockId):
+    print blockId
+    blocks = g.blocks
+    which = 0
+    for i in range(0, len(blocks)):
+        if blocks[i].uid == int(blockId):
+            which = i
+    #change
+    if (request.form.has_key('change')):
+        flash("change success")
+        blocks[which].width = int(request.form.get('width'))
+        blocks[which].height = int(request.form.get('height'))
+    #delete    
+    elif (request.form.has_key('delete')):
+        flash("delete success")
+        del blocks[which]
+    print session['ihomepage']
+    ss = []
+    for i in blocks:
+        ss.append(object2dict(i))
+    session['ihomepage'] = json.dumps(ss)
+    return redirect('/setting')
 
 @app.route('/dbupload', methods = ['GET', 'POST'])
 def dbupload():

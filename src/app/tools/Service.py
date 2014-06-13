@@ -26,7 +26,7 @@ class Service:
             password = config['password']
         if config.has_key('custom'):
             custom = config['custom']
-        return render_template("ServiceSetting.html", username = username, password = password, custom = custom, blockId = blockId)
+        return render_template("ServiceSetting.html", username = username, password = password, custom = custom, blockId = blockId, which = which)
 
     def applysetting(self, blockId):
         blocks = g.blocks
