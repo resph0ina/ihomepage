@@ -62,6 +62,7 @@
 <div class="content">
 {% for block in blocks%}
 	<div class="block" id="b{{ block.uid }}">
+	<div class="blocktitle">{{ block.name }} </div>
 	<div class='blockcontent'>
 	<div class='blocksetting'  id="b{{ block.uid }}"></div>
 	<form method="POST" action="/settingmodify/{{block['uid']}}">

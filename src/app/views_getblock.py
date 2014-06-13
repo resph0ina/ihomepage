@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from flask import Flask, render_template, url_for, redirect, session, request, g, make_response
 from app import app, database, block
 import json, urllib2
@@ -42,7 +43,7 @@ def _getservice(name, datadict):
 		else:
 			return infoservice()
 	except Exception, e:
-		raise e
+		return {'name':'','type':'raw','data':u'网络错误 ^_^'}
 
 @app.route('/service/getpic')
 def getpicture():

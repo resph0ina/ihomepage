@@ -5,9 +5,10 @@ body {
 	background-color:#ccdce5;
 }
 
-.content{
-	margin-left: 100px;
-	margin-right: 100px;
+.content{	
+	/*width: 950px;*/
+	margin-left: 200px;
+	margin-right: 200px;
 }
 
 .block{
@@ -58,10 +59,6 @@ border-radius: 5px;
 .blockcontent p{
 	margin-top:0px;
 	margin-bottom: 8px
-}
-
-.blockcontent a{
-	color:#009;
 }
 
 .blocktitle{

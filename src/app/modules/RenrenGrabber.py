@@ -10,10 +10,6 @@ import urllib, urllib2, socket, cookielib
 import shelve
 from BeautifulSoup import BeautifulSoup
 
-
-# 避免urllib2永远不返回
-socket.setdefaulttimeout(10)
-
 class RenrenRequester:
     '''
     人人访问器

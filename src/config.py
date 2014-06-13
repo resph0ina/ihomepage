@@ -1,8 +1,11 @@
 # -*- coding:utf-8 -*-
 from app.modules import *
 from app.tools import *
-import os
+import os,socket
 basedir = os.path.abspath(os.path.dirname(__file__))
+
+# 避免urllib2永远不返回
+socket.setdefaulttimeout(4)
 
 CSRF_ENABLED = True
 SECRET_KEY = 'you-will-never-guess'
