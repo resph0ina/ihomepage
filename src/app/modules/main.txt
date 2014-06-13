@@ -1,0 +1,346 @@
+<div class = "a-feed" id="25365854645"><div class = "clearfix header"><div class="user-avatar" original_actor="" original_source="" data-sourcecontrol="99" data-stype="502" data-id="279831165" data-source="5204569471" data-create-time="1402546757461">
+<a target="_blank" href="http://www.renren.com/profile.do?id=279831165&ref=hotnewsfeed&sfet=502&fin=0&fid=25365854645&ff_id=279831165&platform=10&expose_time=1402565668"
+        class="avatar"namecard="279831165">
+    <img src="http://hdn.xnimg.cn/photos/hdn321/20131121/2015/tiny_CkFO_47450002caa5111a.jpg" width="50" title="李博" /></a></div><div class="feed-user-info clearfix" >
+	<a target="_blank" href="http://www.renren.com/profile.do?id=279831165" class="feed-user-name"namecard="279831165">李博</a>&nbsp;</div><div class="feed-action-info">
+	<p>公开发布状态&nbsp;-
+      <span class = "pub-time">今天 12:19</span>
+      </p>
+</div><div class="feed-tool" type="toolbar"><div class="feed-menu"><li><a href="#nogo" class="feed-focus-user">添加TA为特别关注</a></li><li><a href="#nogo" class="feed-block-user">屏蔽TA的新鲜事</a></li>
+                          <li><a href="#nogo" class="feed-setting-item">新鲜事设置</a></li>
+                  </div></div><a href="#nogo" class="feed-hide">
+	<p>标记为已读<i></i></p>
+</a></div><div class = "feed-content"><p class = "status">在伟伦买了个凤梨酥，里面一半是菠萝馅一半是酸死人的山楂馅，感到很受伤</p></div><div class="appendix clearfix"><a href="#nogo" class="feed-btn like" title="赞" data-addurl="" data-removeurl="" data-like='{"stype":"status","sourceId":"5204569471","owner":"279831165","uid":"278457815","name":"贾思博","othfirst":"","othsecond":"","oththird":"","othforth":""}'>
+      <i></i>5</a><div class="feed-talk-container clearfix"><a href="#nogo" class="share" title="分享" data-share='{"stype":"status_forward","id":"5204569471","owner":"279831165"}' ><i></i>
+		</a>
+		<i class="split-icon"></i>
+		<a href="#nogo" class="feed-to-talk"></a>
+	</div><a href="#nogo" class="feed-btn reply" title="评论" data-reply='{"stype":"status","sourceId":"5204569471","owner":"279831165"}'style="display:none;">
+		<i></i>
+	</a>
+	<div class="like-friend-list clearfix">
+	</div>
+</div><div class="feed-reply-container" >
+  <div class="feed-replies"></div>
+</div>
+<div class="own-reply clearfix">
+	<a class="avatar">
+		<img src="http://a.xnimg.cn/a.gif">
+	</a>
+	<div class="own-reply-content"> 
+    <div class="input-container">
+      <div contenteditable="true" class="reply-input" data-privacy="{&quot;control&quot;:99,&quot;createTime&quot;:&quot;1402546757461&quot;,&quot;privacyGroupId&quot;:&quot;0&quot;,&quot;owner&quot;:279831165,&quot;ugcGID&quot;:&quot;3530822113063038335&quot;,&quot;public&quot;:true}" ></div> 
+		    <div class="tool-bar clearfix">
+			    <a class="emotion" title="表情" href="#nogo">表情</a>
+			    <p>
+				    <span class="rest-count">0</span>
+				    /
+				    <span>240</span>
+                                    <span class="tips-text">Ctrl+Enter发送</span>
+			    </p>
+		    </div>
+		  </div>
+		  <div class="reply-btns clearfix">
+			  <a href="#nogo" class="add-comment">发布评论</a>
+			  <a href="#nogo" class="cancel-comment">取消</a>
+		  </div>
+	</div>
+</div><div id="get-params-for-25365854645" style="display:none;">
+{
+  "no_desc":"0",
+  "isUserFeed":"1",
+  "cid": "5204569471",
+  "oid":"279831165",
+  "type": "status",
+  "typeNum": "3",
+  "rpLength": "0",
+  "userDigged":"",
+  "digged":"5",
+  "stype":"502",
+  "feedOwnerId":"279831165","loadURI": "http://comment.renren.com/comment/xoa2/",
+     "sendURI": "http://comment.renren.com/comment/xoa2/create",
+     "delURI": "http://comment.renren.com/comment/xoa2/commentId/remove",
+     "cSection": "true"}
+</div></div><div class = "a-feed" id="25366008361"><div class = "clearfix header"><div class="user-avatar" original_actor="" original_source="" data-sourcecontrol="" data-stype="505" data-id="275443089" data-source="5204585029" data-create-time="1402548670000">
+<a target="_blank" href="http://www.renren.com/profile.do?id=275443089&ref=hotnewsfeed&sfet=505&fin=1&fid=25366008361&ff_id=275443089&platform=10&expose_time=1402565668"
+        class="avatar"namecard="275443089">
+    <img src="http://hdn.xnimg.cn/photos/hdn221/20130525/1325/h_tiny_WkbN_269b00000383113e.jpg" width="50" title="高俊杨" /></a></div><div class="feed-user-info clearfix" >
+	<a target="_blank" href="http://www.renren.com/profile.do?id=275443089" class="feed-user-name"namecard="275443089">高俊杨</a>&nbsp;<a target="_blank" class="feed-icon-android" title="Android" href=http://page.renren.com/600006117>
+        <i></i>
+      </a></div><div class="feed-action-info">
+	<p>公开转发状态&nbsp;-
+      <span class = "pub-time">今天 12:51</span>
+      </p>
+</div><div class="feed-tool" type="toolbar"><div class="feed-menu"><li><a href="#nogo" class="feed-focus-user">添加TA为特别关注</a></li><li><a href="#nogo" class="feed-block-user">屏蔽TA的新鲜事</a></li>
+                          <li><a href="#nogo" class="feed-setting-item">新鲜事设置</a></li>
+                  </div></div><a href="#nogo" class="feed-hide">
+	<p>标记为已读<i></i></p>
+</a></div><div class="feed-content">
+<p class = "share-desc">转自<a href="http://www.renren.com/profile.do?id=266243176" namecard="266243176" target="_blank">牟瞳</a>:<img src='http://a.xnimg.cn/imgpro/icons/statusface/yali.gif ' alt='鸭梨' class='ubb-type-16' width='16' height='16' />转自<a href="http://www.renren.com/profile.do?id=318468503" namecard="318468503" target="_blank">皇甫平</a>: 转自<a href="http://www.renren.com/profile.do?id=332094695" namecard="332094695" target="_blank">王舸</a>:转自<a href="http://www.renren.com/profile.do?id=371491546" namecard="371491546" target="_blank">王辛未┼xinwei</a>: 转自<a href="http://www.renren.com/profile.do?id=311599708" namecard="311599708" target="_blank">董花生</a>:转自<a href="http://www.renren.com/profile.do?id=357618480" namecard="357618480" target="_blank">馮爺</a>: 哎，<img src='http://a.xnimg.cn/imgpro/emotions/tie/8.gif?ver=1 ' alt='囧-窘迫' class='ubb-type-16' width='16' height='16' /><img src='http://a.xnimg.cn/imgpro/emotions/tie/5.gif?ver=1 ' alt='尴尬' class='ubb-type-16' width='16' height='16' />...转自<a href="http://www.renren.com/profile.do?id=484562533" namecard="484562533" target="_blank">徐苗条</a>: 草 转自<a href="http://www.renren.com/profile.do?id=285118613" namecard="285118613" target="_blank">【Maple】谢熠</a>: <img src='http://a.xnimg.cn/imgpro/icons/statusface/1.gif?ver=1 ' alt='微笑' class='ubb-type-16' width='16' height='16' />转自<a href="http://www.renren.com/profile.do?id=334505344" namecard="334505344" target="_blank">朱益谦</a>: 转自<a href="http://www.renren.com/profile.do?id=333347681" namecard="333347681" target="_blank">王退之ZOEY</a></p><div class = "share-content">
+<p class="share-status">
+<a href="http://www.renren.com/profile.do?id=333347681" target="_blank" class="user-name" namecard="333347681">王退之ZOEY</a>：真正努力过的人，都会明白天赋的重要。</p></div>
+</div><div class="appendix clearfix"><a href="#nogo" class="feed-btn like" title="赞" data-addurl="" data-removeurl="" data-like='{"stype":"status","sourceId":"5204585029","owner":"275443089","uid":"278457815","name":"贾思博","othfirst":"","othsecond":"","oththird":"","othforth":""}'>
+      <i></i></a><div class="feed-talk-container clearfix"><a href="#nogo" class="share" title="分享" data-share='{"stype":"status_forward","id":"5204585029","owner":"275443089"}' ><i></i>
+		</a>
+		<i class="split-icon"></i>
+		<a href="#nogo" class="feed-to-talk"></a>
+	</div><a href="#nogo" class="feed-btn reply" title="评论" data-reply='{"stype":"status","sourceId":"5204585029","owner":"275443089"}'style="display:none;">
+		<i></i>
+	</a>
+	<div class="like-friend-list clearfix">
+	</div>
+</div><div class="feed-reply-container" >
+  <div class="feed-replies"></div>
+</div>
+<div class="own-reply clearfix">
+	<a class="avatar">
+		<img src="http://a.xnimg.cn/a.gif">
+	</a>
+	<div class="own-reply-content"> 
+    <div class="input-container">
+      <div contenteditable="true" class="reply-input" data-privacy="" ></div> 
+		    <div class="tool-bar clearfix">
+			    <a class="emotion" title="表情" href="#nogo">表情</a>
+			    <p>
+				    <span class="rest-count">0</span>
+				    /
+				    <span>240</span>
+                                    <span class="tips-text">Ctrl+Enter发送</span>
+			    </p>
+		    </div>
+		  </div>
+		  <div class="reply-btns clearfix">
+			  <a href="#nogo" class="add-comment">发布评论</a>
+			  <a href="#nogo" class="cancel-comment">取消</a>
+		  </div>
+	</div>
+</div><div id="get-params-for-25366008361" style="display:none;">
+{
+  "no_desc":"1",
+  "isUserFeed":"1",
+  "cid": "5204585029",
+  "oid":"275443089",
+  "type": "status",
+  "typeNum": "3",
+  "rpLength": "",
+  "userDigged":"",
+  "digged":"",
+  "stype":"505",
+  "feedOwnerId":"275443089","loadURI": "http://comment.renren.com/comment/xoa2/",
+     "sendURI": "http://comment.renren.com/comment/xoa2/create",
+     "delURI": "http://comment.renren.com/comment/xoa2/commentId/remove",
+     "cSection": "true"}
+</div></div><div class = "a-feed" id="25365736607"><div class = "clearfix header"><div class="user-avatar" original_actor="" original_source="" data-sourcecontrol="99" data-stype="502" data-id="377949745" data-source="5204558675" data-create-time="1402545271635">
+<a target="_blank" href="http://www.renren.com/profile.do?id=377949745&ref=hotnewsfeed&sfet=502&fin=2&fid=25365736607&ff_id=377949745&platform=10&expose_time=1402565668"
+        class="avatar"namecard="377949745">
+    <img src="http://hdn.xnimg.cn/photos/hdn421/20140611/1950/tiny_HdfB_de550000da5b195a.jpg" width="50" title="李轻飏" /></a></div><div class="feed-user-info clearfix" >
+	<a target="_blank" href="http://www.renren.com/profile.do?id=377949745" class="feed-user-name"namecard="377949745">李轻飏</a>&nbsp;</div><div class="feed-action-info">
+	<p>公开发布状态&nbsp;-
+      <span class = "pub-time">今天 11:54</span>
+      </p>
+</div><div class="feed-tool" type="toolbar"><div class="feed-menu"><li><a href="#nogo" class="feed-focus-user">添加TA为特别关注</a></li><li><a href="#nogo" class="feed-block-user">屏蔽TA的新鲜事</a></li>
+                          <li><a href="#nogo" class="feed-setting-item">新鲜事设置</a></li>
+                  </div></div><a href="#nogo" class="feed-hide">
+	<p>标记为已读<i></i></p>
+</a></div><div class = "feed-content"><p class = "status">多少年没动过笔了，手写三千字论文ing</p></div><div class="appendix clearfix"><a href="#nogo" class="feed-btn like" title="赞" data-addurl="" data-removeurl="" data-like='{"stype":"status","sourceId":"5204558675","owner":"377949745","uid":"278457815","name":"贾思博","othfirst":"","othsecond":"","oththird":"","othforth":""}'>
+      <i></i>2</a><div class="feed-talk-container clearfix"><a href="#nogo" class="share" title="分享" data-share='{"stype":"status_forward","id":"5204558675","owner":"377949745"}' ><i></i>
+		</a>
+		<i class="split-icon"></i>
+		<a href="#nogo" class="feed-to-talk"></a>
+	</div><a href="#nogo" class="feed-btn reply" title="评论" data-reply='{"stype":"status","sourceId":"5204558675","owner":"377949745"}'style="display:none;">
+		<i>1</i>
+	</a>
+	<div class="like-friend-list clearfix">
+	</div>
+</div><div class="feed-reply-container" >
+  <div class="feed-replies"><div class="a-reply clearfix">
+        <a href="http://www.renren.com/profile.do?id=377949745&ref=hotnewsfeed&sfet=502&fin=2&fid=25365736607&ff_id=377949745&platform=10&expose_time=1402565668" class="avatar" target="_blank" namecard="377949745">
+          <img src="http://hdn.xnimg.cn/photos/hdn421/20140611/1950/tiny_HdfB_de550000da5b195a.jpg" class="user-avatar"/>
+        </a>
+        <div class="reply-content">
+          <p class="reply-info clearfix">
+            <a href="http://www.renren.com/profile.do?id=377949745"  target="_blank" class="user-name" namecard="377949745">李轻飏</a>
+          <span class="time">2014-06-12 11:59</span><span class="reply-tool clearfix"><a href="#nogo" class="to-reply" data-fid="25365736607" data-rid="15872537278" data-uname="李轻飏" data-uid="377949745">回复
+              </a><a href="#nogo" class="trigger-like-comment" data-like='{"stype":"status","sourceId":"15872537278","resource":"5204558675","owner":"377949745","resourceownerid":"377949745","url":"http://status.renren.com/getdoing.do?id=377949745&doingId=5204558675","liked":false}'>赞</a></span>
+         </p><p class="text">字都不会写了</p></div>
+        </div></div>
+</div>
+<div class="own-reply clearfix">
+	<a class="avatar">
+		<img src="http://a.xnimg.cn/a.gif">
+	</a>
+	<div class="own-reply-content"> 
+    <div class="input-container">
+      <div contenteditable="true" class="reply-input" data-privacy="{&quot;control&quot;:99,&quot;createTime&quot;:&quot;1402545271635&quot;,&quot;privacyGroupId&quot;:&quot;0&quot;,&quot;owner&quot;:377949745,&quot;ugcGID&quot;:&quot;3530822113063027539&quot;,&quot;public&quot;:true}" ></div> 
+		    <div class="tool-bar clearfix">
+			    <a class="emotion" title="表情" href="#nogo">表情</a>
+			    <p>
+				    <span class="rest-count">0</span>
+				    /
+				    <span>240</span>
+                                    <span class="tips-text">Ctrl+Enter发送</span>
+			    </p>
+		    </div>
+		  </div>
+		  <div class="reply-btns clearfix">
+			  <a href="#nogo" class="add-comment">发布评论</a>
+			  <a href="#nogo" class="cancel-comment">取消</a>
+		  </div>
+	</div>
+</div><div id="get-params-for-25365736607" style="display:none;">
+{
+  "no_desc":"0",
+  "isUserFeed":"1",
+  "cid": "5204558675",
+  "oid":"377949745",
+  "type": "status",
+  "typeNum": "3",
+  "rpLength": "1",
+  "userDigged":"",
+  "digged":"2",
+  "stype":"502",
+  "feedOwnerId":"377949745","loadURI": "http://comment.renren.com/comment/xoa2/",
+     "sendURI": "http://comment.renren.com/comment/xoa2/create",
+     "delURI": "http://comment.renren.com/comment/xoa2/commentId/remove",
+     "cSection": "true"}
+</div></div><div class = "a-feed" id="25366097598"><div class = "clearfix header"><div class="user-avatar" original_actor="" original_source="" data-sourcecontrol="" data-stype="505" data-id="429289275" data-source="5204594251" data-create-time="1402549796029">
+<a target="_blank" href="http://www.renren.com/profile.do?id=429289275&ref=hotnewsfeed&sfet=505&fin=3&fid=25366097598&ff_id=429289275&platform=10&expose_time=1402565668"
+        class="avatar"namecard="429289275">
+    <img src="http://hdn.xnimg.cn/photos/hdn421/20120515/0850/h_tiny_z8tz_25a100010ead2f76.jpg" width="50" title="赵云飞" /></a></div><div class="feed-user-info clearfix" >
+	<a target="_blank" href="http://www.renren.com/profile.do?id=429289275" class="feed-user-name"namecard="429289275">赵云飞</a>&nbsp;</div><div class="feed-action-info">
+	<p>公开转发状态&nbsp;-
+      <span class = "pub-time">今天 13:09</span>
+      </p>
+</div><div class="feed-tool" type="toolbar"><div class="feed-menu"><li><a href="#nogo" class="feed-focus-user">添加TA为特别关注</a></li><li><a href="#nogo" class="feed-block-user">屏蔽TA的新鲜事</a></li>
+                          <li><a href="#nogo" class="feed-setting-item">新鲜事设置</a></li>
+                  </div></div><a href="#nogo" class="feed-hide">
+	<p>标记为已读<i></i></p>
+</a></div><div class="feed-content">
+<p class = "share-desc">转自<a href="http://page.renren.com/601325817" namecard="601325817" target="_blank">每日考研笔记</a></p><div class = "share-content">
+<p class="share-status">
+<a href="http://www.renren.com/profile.do?id=601325817" target="_blank" class="user-name" namecard="601325817">每日考研笔记</a>：【悲惨写照】学习？在家有电脑学不进去，在图书馆有wifi学不进去，没wifi就一直找wifi学不进去，一个人无聊不想学，人多了想聊天不想学，饿了不想学，饱了想睡觉，有好玩的就玩，没好玩的找好玩的玩，太难学不会，简单不想学，快考试了抱佛脚没用不想学，不考试学毛线？我觉得我不适合学习，没救了!<img src='http://a.xnimg.cn/imgpro/icons/statusface/cry.gif ' alt='哭' class='ubb-type-16' width='16' height='16' /></p></div>
+</div><div class="appendix clearfix"><a href="#nogo" class="feed-btn like" title="赞" data-addurl="" data-removeurl="" data-like='{"stype":"status","sourceId":"5204594251","owner":"429289275","uid":"278457815","name":"贾思博","othfirst":"","othsecond":"","oththird":"","othforth":""}'>
+      <i></i></a><div class="feed-talk-container clearfix"><a href="#nogo" class="share" title="分享" data-share='{"stype":"status_forward","id":"5204594251","owner":"429289275"}' ><i></i>
+		</a>
+		<i class="split-icon"></i>
+		<a href="#nogo" class="feed-to-talk"></a>
+	</div><a href="#nogo" class="feed-btn reply" title="评论" data-reply='{"stype":"status","sourceId":"5204594251","owner":"429289275"}'style="display:none;">
+		<i></i>
+	</a>
+	<div class="like-friend-list clearfix">
+	</div>
+</div><div class="feed-reply-container" >
+  <div class="feed-replies"></div>
+</div>
+<div class="own-reply clearfix">
+	<a class="avatar">
+		<img src="http://a.xnimg.cn/a.gif">
+	</a>
+	<div class="own-reply-content"> 
+    <div class="input-container">
+      <div contenteditable="true" class="reply-input" data-privacy="" ></div> 
+		    <div class="tool-bar clearfix">
+			    <a class="emotion" title="表情" href="#nogo">表情</a>
+			    <p>
+				    <span class="rest-count">0</span>
+				    /
+				    <span>240</span>
+                                    <span class="tips-text">Ctrl+Enter发送</span>
+			    </p>
+		    </div>
+		  </div>
+		  <div class="reply-btns clearfix">
+			  <a href="#nogo" class="add-comment">发布评论</a>
+			  <a href="#nogo" class="cancel-comment">取消</a>
+		  </div>
+	</div>
+</div><div id="get-params-for-25366097598" style="display:none;">
+{
+  "no_desc":"1",
+  "isUserFeed":"1",
+  "cid": "5204594251",
+  "oid":"429289275",
+  "type": "status",
+  "typeNum": "3",
+  "rpLength": "",
+  "userDigged":"",
+  "digged":"",
+  "stype":"505",
+  "feedOwnerId":"429289275","loadURI": "http://comment.renren.com/comment/xoa2/",
+     "sendURI": "http://comment.renren.com/comment/xoa2/create",
+     "delURI": "http://comment.renren.com/comment/xoa2/commentId/remove",
+     "cSection": "true"}
+</div></div><div class = "a-feed" id="25365808913"><div class = "clearfix header"><div class="user-avatar" original_actor="" original_source="" data-sourcecontrol="99" data-stype="502" data-id="345269940" data-source="5204565691" data-create-time="1402546200533">
+<a target="_blank" href="http://www.renren.com/profile.do?id=345269940&ref=hotnewsfeed&sfet=502&fin=4&fid=25365808913&ff_id=345269940&platform=10&expose_time=1402565668"
+        class="avatar"namecard="345269940">
+    <img src="http://hdn.xnimg.cn/photos/hdn121/20120922/1530/h_tiny_pqy1_1a0f000016af1376.jpg" width="50" title="王东岳.st" /></a></div><div class="feed-user-info clearfix" >
+	<a target="_blank" href="http://www.renren.com/profile.do?id=345269940" class="feed-user-name"namecard="345269940">王东岳.st</a>&nbsp;</div><div class="feed-action-info">
+	<p>公开发布状态&nbsp;-
+      <span class = "pub-time">今天 12:10</span>
+      </p>
+</div><div class="feed-tool" type="toolbar"><div class="feed-menu"><li><a href="#nogo" class="feed-focus-user">添加TA为特别关注</a></li><li><a href="#nogo" class="feed-block-user">屏蔽TA的新鲜事</a></li>
+                          <li><a href="#nogo" class="feed-setting-item">新鲜事设置</a></li>
+                  </div></div><a href="#nogo" class="feed-hide">
+	<p>标记为已读<i></i></p>
+</a></div><div class = "feed-content"><p class = "status">每年一到期末收拾书的时候就想起一件事。。。大一军训买的三体III-死神永生还没看。。。</p></div><div class="appendix clearfix"><a href="#nogo" class="feed-btn like" title="赞" data-addurl="" data-removeurl="" data-like='{"stype":"status","sourceId":"5204565691","owner":"345269940","uid":"278457815","name":"贾思博","othfirst":"","othsecond":"","oththird":"","othforth":""}'>
+      <i></i>1</a><div class="feed-talk-container clearfix"><a href="#nogo" class="share" title="分享" data-share='{"stype":"status_forward","id":"5204565691","owner":"345269940"}' ><i></i>
+		</a>
+		<i class="split-icon"></i>
+		<a href="#nogo" class="feed-to-talk"></a>
+	</div><a href="#nogo" class="feed-btn reply" title="评论" data-reply='{"stype":"status","sourceId":"5204565691","owner":"345269940"}'style="display:none;">
+		<i>1</i>
+	</a>
+	<div class="like-friend-list clearfix">
+	</div>
+</div><div class="feed-reply-container" >
+  <div class="feed-replies"><div class="a-reply clearfix">
+        <a href="http://www.renren.com/profile.do?id=354274000&ref=hotnewsfeed&sfet=502&fin=4&fid=25365808913&ff_id=345269940&platform=10&expose_time=1402565668" class="avatar" target="_blank" namecard="354274000">
+          <img src="http://hdn.xnimg.cn/photos/hdn521/20130718/2140/h_tiny_bjsc_05410000007e111a.jpg" class="user-avatar"/>
+        </a>
+        <div class="reply-content">
+          <p class="reply-info clearfix">
+            <a href="http://www.renren.com/profile.do?id=354274000"  target="_blank" class="user-name" namecard="354274000">孙皓</a>
+          <span class="time">2014-06-12 12:47</span><span class="reply-tool clearfix"><a href="#nogo" class="to-reply" data-fid="25365808913" data-rid="15872568408" data-uname="孙皓" data-uid="354274000">回复
+              </a><a href="#nogo" class="trigger-like-comment" data-like='{"stype":"status","sourceId":"15872568408","resource":"5204565691","owner":"354274000","resourceownerid":"345269940","url":"http://status.renren.com/getdoing.do?id=345269940&doingId=5204565691","liked":false}'>赞</a></span>
+         </p><p class="text">开了吧，一天就能看完</p></div>
+        </div></div>
+</div>
+<div class="own-reply clearfix">
+	<a class="avatar">
+		<img src="http://a.xnimg.cn/a.gif">
+	</a>
+	<div class="own-reply-content"> 
+    <div class="input-container">
+      <div contenteditable="true" class="reply-input" data-privacy="{&quot;control&quot;:99,&quot;createTime&quot;:&quot;1402546200533&quot;,&quot;privacyGroupId&quot;:&quot;0&quot;,&quot;owner&quot;:345269940,&quot;ugcGID&quot;:&quot;3530822113063034555&quot;,&quot;public&quot;:true}" ></div> 
+		    <div class="tool-bar clearfix">
+			    <a class="emotion" title="表情" href="#nogo">表情</a>
+			    <p>
+				    <span class="rest-count">0</span>
+				    /
+				    <span>240</span>
+                                    <span class="tips-text">Ctrl+Enter发送</span>
+			    </p>
+		    </div>
+		  </div>
+		  <div class="reply-btns clearfix">
+			  <a href="#nogo" class="add-comment">发布评论</a>
+			  <a href="#nogo" class="cancel-comment">取消</a>
+		  </div>
+	</div>
+</div><div id="get-params-for-25365808913" style="display:none;">
+{
+  "no_desc":"0",
+  "isUserFeed":"1",
+  "cid": "5204565691",
+  "oid":"345269940",
+  "type": "status",
+  "typeNum": "3",
+  "rpLength": "1",
+  "userDigged":"",
+  "digged":"1",
+  "stype":"502",
+  "feedOwnerId":"345269940","loadURI": "http://comment.renren.com/comment/xoa2/",
+     "sendURI": "http://comment.renren.com/comment/xoa2/create",
+     "delURI": "http://comment.renren.com/comment/xoa2/commentId/remove",
+     "cSection": "true"}
+</div></div>##@L#1##@L#5##@L#5##@L#1

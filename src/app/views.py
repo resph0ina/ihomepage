@@ -20,6 +20,7 @@ def ihomepage():
         b1.name = 'baidu.news'
         b1.width = 1
         b2 = block.Block('textlines')
+        b2.name = 'renren.status'
         b2.width = 2
         b2.height = 2
         b2.color='green'
