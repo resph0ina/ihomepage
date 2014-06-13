@@ -18,5 +18,7 @@ SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
 
 SERVICES = {'baidu.news': TestGrabber.TestGrabber(), 
 	'renren.status': RenrenGrabber.RenrenGrabber(),
-	'weather.simple': WeatherGrabber.WeatherGrabber()}
+	'weather.simple': WeatherGrabber.WeatherGrabber(),
+	'baidu.hotword' : Baiduword.BaiduWordGrabber(),
+	'baidu.worldcup' : BaiduWcup.BaiduWorldcupGrabber()}
 TOOLS = {'image': Image.Image()}

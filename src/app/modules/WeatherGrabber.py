@@ -5,8 +5,8 @@ from BeautifulSoup import BeautifulSoup
 
 class WeatherGrabber(object):
 	"""docstring for WeatherGrabber"""
-	def grab(self, *arg):
-		html = urllib2.urlopen('http://www.weather.com.cn/data/sk/101010100.html', timeout=5).read()
+	def grab(self, arg = {}):
+		html = urllib2.urlopen('http://www.weather.com.cn/data/sk/101010100.html').read()
 		d = json.loads(html)['weatherinfo']
 		res = []
 		res.append({'text':d['city']})

@@ -21,7 +21,8 @@
 <table class='wrap'>
 	{% for line in content.data%}
 	<tr style="vertical-align:top"><td>
-		<img src="{{ line.image }}" width="50" /></td><td>
+		<img src="/service/getpic?url={{ line.image }}" width="50" />
+	</td><td>
 		{{ line.text }}	
 	</td></tr>
 	{% endfor %}

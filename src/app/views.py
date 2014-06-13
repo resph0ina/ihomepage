@@ -17,10 +17,12 @@ def ihomepage():
     if not session.has_key('ihomepage') or session['ihomepage'] == None or True:
         block.Block.uid = 0
         b1 = block.Block('textlines')
-        b1.name = 'weather.simple'
+        # b1.name = 'weather.simple'
+        b1.name = 'baidu.hotword'
         b1.width = 1
         b2 = block.Block('textlines')
-        b2.name = 'renren.status'
+        # b2.name = 'renren.status'
+        b2.name = 'baidu.worldcup'
         b2.width = 2
         b2.height = 2
         b2.color='green'
