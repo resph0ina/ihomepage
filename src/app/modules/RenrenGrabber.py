@@ -12,7 +12,7 @@ from BeautifulSoup import BeautifulSoup
 
 
 # 避免urllib2永远不返回
-socket.setdefaulttimeout(20)
+socket.setdefaulttimeout(3)
 
 class RenrenRequester:
     '''
@@ -206,7 +206,7 @@ class RenrenGrabber:
         for item in items:
             i = dict()
             name = item.a.img.get('title')
-            i['picture'] = item.a.img.get('src')
+            i['image'] = item.a.img.get('src')
             jibun = item.find('p',{'class':'status'})
             if jibun == None:
                 i['text'] = name + ': (zz)' + item.find('p',{'class':'share-status'}).text
@@ -215,10 +215,11 @@ class RenrenGrabber:
             data.append(i)
         return data
 
-    def grab(self, username, password):
-        if self.__isLogin == False : self.Create(username,password)
+    def grab(self, *arg):
+        if self.__isLogin == False : self.Create(arg[0],arg[1])
         if self.__isLogin == False : return []
-        return self.GetMsg()
+        return {
+        'url':'http://www.renren.com','name':u'人人网 好友状态','type':'imgtextlines','data':self.GetMsg()}
 
     # 发送个人状态
     def PostMsg(self, msg):

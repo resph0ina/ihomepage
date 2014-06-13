@@ -1,11 +1,18 @@
 body {
-	background-color:"white";
 	padding:5px;
+	font-family:"Trebuchet MS", tahoma, arial;
+	font-size:12px;
+	background-color:#ccdce5;
 }
 
 .content{
 	margin-left: 100px;
 	margin-right: 100px;
+}
+
+table tr td{
+	/*padding:4px;*/
+	/*background-color: #dddddd;*/
 }
 
 .greenblock{
@@ -23,29 +30,64 @@ body {
 }
 
 .block{
-	font-family:"Consolas","Times New Roman","楷体_GB2312","楷体","华文楷体","宋体";
+	font-family:"Consolas","Times New Roman","微软雅黑","楷体","华文楷体","宋体";
 	-webkit-box-shadow: 2px 2px 4px #000;
 	-moz-box-shadow: 0 0 4px #000;
 	box-shadow: 2px 2px 4px #000;
 	-webkit-transition: -webkit-box-shadow .3s ease-out;
 	-moz-transition: -moz-box-shadow .3s ease-out;
 	transition: box-shadow .3s ease-out;
-
 	margin: 5px;
 	float:left;
 	background-color: rgb(250,100,100);
-	padding: 10px;
-	font-size: 20px;
+	/*padding: 10px;*/
+	padding-bottom: 40px;
+	font-size: 16px;
 	/*position: absolute;*/
 }
 
-.wrap { table-layout:fixed; word-break: break-all; overflow:hidden; } 
+.wrap { 
+	table-layout:fixed;
+	word-break: break-all;
+	overflow:hidden; } 
 
 .block:hover {
 	/*cursor: pointer;*/
 	-webkit-box-shadow: 4px 4px 12px #000;
 	-moz-box-shadow: 0 0 12px #000;
 	box-shadow: 4px 4px 12px #000;
+}
+
+.blockcontent {
+	margin: 10px;
+	overflow-y:auto;
+	height: 100%;
+	
+}
+
+.blockcontent img{
+border-radius: 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+}
+
+.blocktitle{
+	background: rgba(255, 255, 255, 0.5)!important;
+    background: #fff;
+    filter: alpha(opacity=50);  
+	height: 20px;
+	padding: 3px;
+	padding-left: 10px;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: '微软雅黑';
+}
+
+.blocktitle img{
+	cursor: pointer;
+	height: 16px;
+	margin: 2px;
+	float: right;
 }
 
 .searchblock{

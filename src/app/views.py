@@ -17,13 +17,19 @@ def ihomepage():
     if not session.has_key('ihomepage') or session['ihomepage'] == None:
         block.Block.uid = 0
         b1 = block.Block('textlines')
-        b1.name = 'baidu.news'
+        b1.name = 'weather.simple'
         b1.width = 1
         b2 = block.Block('textlines')
+        b2.name = 'renren.status'
         b2.width = 2
         b2.height = 2
         b2.color='green'
-        default_blocks = [b1,b2]
+        b3 = block.Block('textlines')
+        b3.name = 'image'
+        b3.width = 2
+        b3.height = 2
+        b3.config = ["a"]
+        default_blocks = [b1,b2,b3]
         session['ihomepage'] = json.dumps(default_blocks, default = object2dict)
 
     blocks = json.loads(session['ihomepage'])
@@ -131,6 +137,7 @@ def setting():
                 del blocks[idmap[i]]
                 session['ihomepage'] = json.dumps(blocks, default = object2dict)
                 postfix = "<br>delete successfully"+str(i)
+    print session['ihomepage']
     blocks = json.loads(session['ihomepage'])
     return render_template('setting.html',
                            session = session,

@@ -4,5 +4,5 @@ class TestGrabber(object):
 	def __init__(self):
 		super(TestGrabber, self).__init__()
 
-	def grab(self):
-		return u'空空如也'	
+	def grab(self, *arg):
+		return {'url':'http://www.baidu.com','name':u'测试','type':'textlines','data':[{'text':u'空空如也'}]}	

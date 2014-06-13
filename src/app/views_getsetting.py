@@ -22,12 +22,12 @@ def getsetting(blockId):
         if Service.Service().applysetting(blockId) == 'success':
             flash('success')
             return redirect('/setting')
-        return Service.Service().rendersetting(b.config, blockId)
+        return Service.Service().rendersetting(blockId)
     elif tools.has_key(b.name):
         if tools[b.name].applysetting(blockId) == 'success':
             flash('success')
             return redirect('/setting')
-        return tools[b.name].rendersetting(b.config, blockId)
+        return tools[b.name].rendersetting(blockId)
     else:
         return "wtf"
     return "wtf"
