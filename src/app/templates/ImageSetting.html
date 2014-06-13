@@ -1,8 +1,9 @@
 <form method="POST" action="/getsetting/{{blockId}}">
+pictures
 {% for i in range(0, num) %}
-	<input type="text" name="src_{{i}}" value="{{urls[i]}}" autocomplete="off">
+	<input type="text" name="src_{{i}}" value="{{urls[i]}}" autocomplete="off"><br>
 {% endfor %}
-<br>
+
 <input type="submit" value="change" name="change">
 </form>
 
@@ -11,3 +12,4 @@
 <br>
 <input type="submit" value="add" name="add">
 </form>
+

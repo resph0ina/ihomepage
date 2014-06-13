@@ -31,8 +31,9 @@ class Image:
         for i in range(0, len(blocks)):
             if blocks[i].uid == int(blockId[1:]):
                 which = i
-        urls = json.loads(session['ihomepage'])[which]['config']
-        return render_template("ImageSetting.html", urls = urls, blockId = blockId, num = len(urls))
+        block = json.loads(session['ihomepage'])[which]
+        urls = block['config']
+        return render_template("ImageSetting.html", urls = urls, blockId = blockId, num = len(urls), block = block)
 
     def applysetting(self, blockId):
         fetch = [i for i in g.blocks if i.uid == int(blockId[1:])]

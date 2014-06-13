@@ -33,6 +33,12 @@
 	$("#b{{ block.uid }}").css("background-color","{{block.color}}");
 	{% endif %}
 	</script>
+	<form method="POST" action="/settingmodify/{{block['uid']}}">
+		width<input type="text" name="width" value="{{block['width']}}" autocomplete="off"><br>
+		height<input type="text" name="height" value="{{block['height']}}" autocomplete="off"><br>
+		<input type="submit" value="change" name="change">
+		<input type="submit" value="delete" name="delete">
+	</form>
 {% endfor %}
 </div>
 
