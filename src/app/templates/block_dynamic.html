@@ -18,8 +18,8 @@
 <!-- <div class="blockcontent"> -->
 <table class='wrap'>
 	{% for line in content.data%}
-	<tr style="vertical-align:top"><td>
-		<img src="/service/getpic?url={{ line.image }}" width="50" />
+	<tr style="vertical-align:top"><td style='width:50px'> 
+		<img src="/service/getpic?url={{ line.image }}" />
 	</td><td>
 		{{ line.text }}	
 	</td></tr>
