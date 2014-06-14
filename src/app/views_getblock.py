@@ -18,7 +18,7 @@ def getblock(blockId):
 		b.content = json.loads(urllib2.urlopen(b.config['custom']).read())
 	elif app.config['SERVICES'].has_key(b.name):
 		b.content = _getservice(b.name, 
-			{'username' : '18911029092', 'password' : 'THUcst)('})
+			{'username' : b.config['username'], 'password' : b.config['password']})
 		#json.loads(getservice(b.name))
 	elif app.config['TOOLS'].has_key(b.name):
 		return app.config['TOOLS'][b.name].render(blockId)
@@ -43,6 +43,7 @@ def _getservice(name, datadict):
 		else:
 			return infoservice()
 	except Exception, e:
+		# raise e
 		return {'name':'','type':'raw','data':u'网络错误 ^_^'}
 
 @app.route('/service/getpic')

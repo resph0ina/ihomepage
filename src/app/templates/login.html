@@ -2,16 +2,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>登录</title>
+<script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='./egg/egg.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='bootstrap.js') }}"></script>
+<link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='egg/egg.css') }}" />
+<link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./es.css') }}" /> 
+<link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./bootstrap.css') }}" /> 
+<link rel="stylesheet" type="text/css" media="all" href="{{ url_for('static', filename='./main.css') }}" /> 
+
 </head>
 
 <body>
 
-<form action="" method="POST">
-username: <input type="text" name="username" autocomplete="off"/><br>
-password: <input type="password" name="password" autocomplete="off"/>
-<input type="submit" value="login" autocomplete="off">
-</form>
-
+<div style="float:right;margin:15px">
 <a href=/>首页</a>
 {% if session.has_key('username') %}
 {{session['username']}}
@@ -20,5 +25,23 @@ password: <input type="password" name="password" autocomplete="off"/>
 <a href=/register>注册</a>
 <a href=/login>登录</a>
 {% endif %}
+</div>
+
+<div class='login'>
+<table>
+<tr>
+<td> <div style='text-align:center'>
+<img src="{{ url_for('static', filename='./logo.png') }}" style="width:400px;margin-left:20px"/>
+</div></td>
+<td style='background-color:rgba(255,255,255,0.3)'>
+<form action="" method="POST">
+<p>用户名 <input type="text" name="username" autocomplete="off"/></p>
+<p>密　码 <input type="password" name="password" autocomplete="off"/></p>
+<input style='width:80px;height:40px' type="submit" value="登录" autocomplete="off">
+</form>
+</td>
+<tr>
+</table>
+</div>
 
 </body>

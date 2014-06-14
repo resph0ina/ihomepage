@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>blocks</title>
+<title>iHomepage</title>
 <script type="text/javascript" src="{{ url_for('static', filename='jquery.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='./egg/egg.js') }}"></script>
 <script type="text/javascript" src="{{ url_for('static', filename='index.js') }}"></script>
@@ -27,8 +27,9 @@
 <a href=/login>登录</a>
 {% endif %}
 </div>
-<h1 style="text-align:center;margin:20px;padding-top:30px">iHomepage</h1>
-
+<div style='text-align:center'>
+<img src="{{ url_for('static', filename='./logo.png') }}" style="width:400px;margin-left:160px"/>
+</div>
 {% include "block_search.html" %}
 
 <div class="content">

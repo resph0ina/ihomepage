@@ -11,6 +11,17 @@ body {
 	margin-right: 200px;
 }
 
+.login{
+	text-align:center;
+	vertical-align: center;
+	margin:50px;	
+	margin-left: 200px;
+	font-size: 18px
+}
+.login td{
+	padding: 40px;
+}
+
 .block{
 	font-family:"Consolas","Times New Roman","微软雅黑","楷体","华文楷体","宋体";
 	-webkit-box-shadow: 2px 2px 4px #000;
@@ -81,10 +92,10 @@ border-radius: 5px;
 }
 
 .searchblock{
-	margin: 10px;
+	/*margin: 10px;*/
 	/*width: 900px;*/
 	height: 40px;
-	padding: 50px;
+	padding-bottom: 50px;
 	TEXT-ALIGN: center;
 }
 #center { MARGIN-RIGHT: auto; MARGIN-LEFT: auto; }

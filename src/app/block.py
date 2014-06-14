@@ -9,7 +9,7 @@ import json
 
 class Block:
     uid = 0
-    def __init__(self, style, name = '', color = '', x = 0, y = 0, width = 1, height = 1, uid = -1, content = {}, config = {}):
+    def __init__(self, style, name = '', color = '', x = 0, y = 0, width = 1, height = 1, uid = -1, content = {}, config = {'username':'', 'password':'', 'custom':''}):
         Block.uid += 1
         if uid == -1:
             self.uid = Block.uid

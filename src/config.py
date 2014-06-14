@@ -18,12 +18,15 @@ SERVICES = {'baidu.news': TestGrabber.TestGrabber(),
 	'weather.simple': WeatherGrabber.WeatherGrabber(),
 	'baidu.hotword' : Baiduword.BaiduWordGrabber(),
 	'baidu.worldcup' : BaiduWcup.BaiduWorldcupGrabber(),
-	'douban.recent' : Douban.Douban()}
+	'zhihu.question' : Zhihu.ZhihuGrabber(),
+	# 'douban.recent' : Douban.Douban(),
+	'custom':None}
 TOOLS = {'image': Image.Image()}
 BLOCKNAME = {u'百度热搜词':'baidu.hotword',
 	u'人人新鲜事':'renren.status',
 	u'实时天气情况':'weather.simple',
 	u'世界杯今日明星':'baidu.worldcup',
 	u'自定义服务':'custom',
-	u'豆瓣最近收听':'douban.recent',
+	u'知乎 感兴趣的':'zhihu.question',
+	# u'豆瓣最近收听':'douban.recent',
 	u'自定义图片':'image'}

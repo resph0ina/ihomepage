@@ -58,7 +58,7 @@ def register():
         if result == 'success':
             session['username'] = newuser['username']
             database.addUser(newuser['username'], newuser['password'])
-            return redirect('/registersuccess')
+            return redirect('/')
         else:
             return render_template("register.html", session = session)+"<br>"+result
     #user click
