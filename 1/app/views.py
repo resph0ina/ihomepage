@@ -93,10 +93,10 @@ def setting():
         flash("add success")
         bk = block.Block('textlines')
         bk.name = request.form.get('name')
-        if request.form.get('width') != '':
-            bk.width = int(request.form.get('width'))
-        if request.form.get('height') != '':
-            bk.width = int(request.form.get('height'))
+        #if request.form.get('width') != '':
+        #    bk.width = int(request.form.get('width'))
+        #if request.form.get('height') != '':
+        #    bk.width = int(request.form.get('height'))
         blocks.append(bk)
         ss = []
         for i in blocks:
